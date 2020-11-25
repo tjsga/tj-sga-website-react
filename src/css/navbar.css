@@ -1,0 +1,19 @@
+.nav {
+	width: 100%;
+	color: #1a202c;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav-link {
+	display: block;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 100;
+	transition: background-color 100ms;
+}
+
+.nav-link:hover {
+	background-color: #ccc;
+}
