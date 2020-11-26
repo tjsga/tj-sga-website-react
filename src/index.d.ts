@@ -15,4 +15,14 @@ declare namespace SGA {
 		publish_date: string;
 		_id: string;
 	}
+
+	interface MemberDocument {
+		_id: string;
+		name: string;
+		year: string;
+		committee: 'excomm' | 'officer' | 'class';
+		role: string;
+		profile_photo: {};
+		bio: string
+	}
 }

@@ -9,6 +9,8 @@ import initiatives from './pages/initiatives';
 import news from './pages/news';
 import newsArticle from './pages/newsArticle';
 import notFound from './pages/404';
+import officers from './pages/officers';
+import committee from './pages/committee';
 
 export default function App() {
 	return (
@@ -18,6 +20,8 @@ export default function App() {
 					<Route path='/initiatives' exact component={initiatives} />
 					<Route path='/news/:articleId' component={newsArticle} />
 					<Route path='/news' exact component={news} />
+					<Route path='/officers' exact component={officers} />
+					<Route path='/committee' exact component={committee} />
 					<Route path='/:path' component={notFound} />
 					<Route path='/' exact component={index} />
 				</Switch>
