@@ -11,11 +11,13 @@ export default function Footer() {
 
 	return (
 		<section className='footer-wrapper'>
+			<hr />
 			<img
 				className='footer-banner'
 				src='/images/footer-banner.png'
 				alt='Footer Banner'
 			/>
+			<hr />
 			<div className='footer-container'>
 				{footer.columns.map((col) => {
 					return (
