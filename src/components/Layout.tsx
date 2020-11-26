@@ -12,15 +12,16 @@ import Footer from './Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<>
-			<div className='bg-light text-dark'>
-				<Navbar></Navbar>
+		<div>
+			<Navbar />
 
-				<main id='page'>{children}</main>
+			<main>
+				{children}
+
 				<hr />
 
 				<Footer />
-			</div>
-		</>
+			</main>
+		</div>
 	);
 }

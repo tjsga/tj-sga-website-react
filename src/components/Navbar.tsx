@@ -21,15 +21,7 @@ export default function Navbar() {
 	return (
 		<div className='nav'>
 			<Link to='/'>
-				<img
-					src='/images/banner.png'
-					alt='TJ SGA'
-					style={{
-						height: '2rem',
-						alignSelf: 'center',
-						margin: '1rem',
-					}}
-				/>
+				<img src='/images/banner.png' alt='TJ SGA' className='nav-logo' />
 			</Link>
 			{pages.map((page) => {
 				return (

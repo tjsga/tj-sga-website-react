@@ -18,15 +18,15 @@ export default function ArticleRow({
 	};
 
 	return (
-		<div style={{ display: 'flex' }}>
-			<div style={{ flex: 1, padding: '10px' }}>
+		<div className='row'>
+			<div className='article-row-thumbnail'>
 				{thumbUrl ? (
 					<img className='mb-4' src={thumbUrl} alt={article.title} />
 				) : null}
 			</div>
-			<div style={{ flex: 3, padding: '10px' }}>
+			<div className='article-row-content'>
 				<Link to={'/news/' + article._id + '/' + slug(article.title)}>
-					<h3 className='font-bold text-3xl'>{article.title}</h3>
+					<h3>{article.title}</h3>
 				</Link>
 				<i className='text-sm'>
 					{article.publish_date} - {article.author || 'No author'}

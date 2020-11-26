@@ -17,3 +17,9 @@
 .nav-link:hover {
 	background-color: #ccc;
 }
+
+.nav-logo {
+	height: 4rem;
+	align-self: center;
+	margin: 1rem;
+}

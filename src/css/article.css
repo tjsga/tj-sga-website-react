@@ -1,0 +1,24 @@
+.load-more-button {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-row-thumbnail {
+  flex: 1;
+  padding: 10px;
+  /*
+		To center the image
+	*/
+  display: flex;
+  align-items: center;
+}
+
+.article-row-content {
+  flex: 3;
+  padding: 10px;
+}

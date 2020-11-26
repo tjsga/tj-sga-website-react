@@ -5,8 +5,8 @@ import Hero from '../components/Hero';
 export default function News() {
 	return (
 		<>
-			<Hero heading='News'></Hero>
-			<ArticleList></ArticleList>
+			<Hero heading='News' />
+			<ArticleList />
 		</>
 	);
 }

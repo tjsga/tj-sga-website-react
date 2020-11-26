@@ -11,7 +11,6 @@ export default function Footer() {
 
 	return (
 		<section className='footer-wrapper'>
-			<hr />
 			<img
 				className='footer-banner'
 				src='/images/footer-banner.png'

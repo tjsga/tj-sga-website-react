@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleRow from './ArticleRow';
 import sanity from '../sanity';
+import '../css/article.css';
 
 export default function ArticleList() {
 	let [articles, setArticles] = React.useState<SGA.ArticleDocument[]>([]);
@@ -40,7 +41,7 @@ export default function ArticleList() {
 	}
 
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column' }}>
+		<div>
 			{articles.map((article) => {
 				return <ArticleRow key={article._id} article={article} />;
 			})}
@@ -48,7 +49,7 @@ export default function ArticleList() {
 			<div className='text-center'>
 				{!reachedEnd ? (
 					<button
-						className='button'
+						className='load-more-button'
 						onClick={() => {
 							let lastArticle = articles[articles.length - 1];
 							addArticles(lastArticle.publish_date, lastArticle.title);

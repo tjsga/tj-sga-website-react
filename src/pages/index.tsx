@@ -1,8 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import NewsAndMission from '../components/NewsAndMission';
 import SegmentGroup from '../components/SegmentGroup';
-
-import Mission from '../components/Mission';
 
 const IndexPage = () => {
 	return (
@@ -10,17 +9,15 @@ const IndexPage = () => {
 			{/* Hero image */}
 			<Hero />
 
+			<hr />
+
 			{/* Info columns */}
 			<SegmentGroup />
 
-			{/* Initiatives section */}
-			{/* <InitiativeList /> */}
+			<hr />
 
 			{/* Mission */}
-			<Mission />
-
-			{/* News articles section */}
-			<section className='container mx-auto px-8 my-8'></section>
+			<NewsAndMission />
 		</>
 	);
 };
