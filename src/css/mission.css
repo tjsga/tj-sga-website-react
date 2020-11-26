@@ -1,3 +1,37 @@
 .mission-box {
 	padding: 0px 20px;
 }
+
+.mission-header {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.mission-para {
+	font-size: 22px;
+	line-height: 33px;
+	font-weight: 300;
+}
+
+.mission-quote {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0px;
+}
+
+.mission-quote-text {
+	font-size: 2rem;
+	font-weight: 600;
+	font-style: italic;
+	font-family: 'Arapey';
+	width: 100%;
+	text-align: center;
+}
+
+.mission-quote-author {
+	width: 100%;
+	text-align: right;
+	font-size: 20px;
+	display: inline-block;
+	padding-right: 200px;
+}

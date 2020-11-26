@@ -6,6 +6,7 @@ import './App.css';
 
 import index from './pages/index';
 import initiatives from './pages/initiatives';
+import mission from './pages/mission';
 import news from './pages/news';
 import newsArticle from './pages/newsArticle';
 import notFound from './pages/404';
@@ -20,6 +21,7 @@ export default function App() {
 					<Route path='/initiatives' exact component={initiatives} />
 					<Route path='/news/:articleId' component={newsArticle} />
 					<Route path='/news' exact component={news} />
+					<Route path='/mission' exact component={mission} />
 					<Route path='/officers' exact component={officers} />
 					<Route path='/committee' exact component={committee} />
 					<Route path='/:path' component={notFound} />

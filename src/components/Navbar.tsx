@@ -8,6 +8,15 @@ let pages = [
 		title: 'Home',
 	},
 	{
+		url: '#',
+		title: 'About Us',
+		items: [
+			{ url: '/officers', title: 'Officers' },
+			{ url: '/committee', title: 'Executive Committee' },
+			{ url: '/class-council', title: 'Class Council' },
+		],
+	},
+	{
 		url: '/news',
 		title: 'News',
 	},

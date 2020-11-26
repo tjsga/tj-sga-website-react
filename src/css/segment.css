@@ -8,14 +8,3 @@
 	line-height: 33px;
 	font-weight: 300;
 }
-
-.segment-button {
-	text-transform: uppercase;
-	padding: 13px 23px;
-	border-width: 2px;
-	border-radius: 0.25rem;
-	border-style: solid;
-	border-color: #38A3BD;
-	color: #38A3BD;
-	display: inline-block;
-}
