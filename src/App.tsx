@@ -12,6 +12,7 @@ import newsArticle from './pages/newsArticle';
 import notFound from './pages/404';
 import officers from './pages/officers';
 import committee from './pages/committee';
+import classcouncil from './pages/classcouncil';
 
 export default function App() {
 	return (
@@ -24,6 +25,7 @@ export default function App() {
 					<Route path='/mission' exact component={mission} />
 					<Route path='/officers' exact component={officers} />
 					<Route path='/committee' exact component={committee} />
+					<Route path='/class-council' exact component={classcouncil} />
 					<Route path='/:path' component={notFound} />
 					<Route path='/' exact component={index} />
 				</Switch>
