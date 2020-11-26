@@ -12,7 +12,7 @@ export default function InitiativeList() {
 	}
 
 	return (
-		<section className='container mx-auto px-8 my-8 flex flex-wrap'>
+		<section className='split-thirds'>
 			{initiatives.map((initiative) => {
 				return <InitiativeColumn key={initiative._id} {...initiative} />;
 			})}

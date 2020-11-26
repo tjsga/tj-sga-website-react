@@ -1,17 +1,20 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import SegmentGroup from '../components/SegmentGroup';
 
-import InitiativeList from '../components/InitiativeList';
 import Mission from '../components/Mission';
 
 const IndexPage = () => {
 	return (
 		<>
 			{/* Hero image */}
-			<Hero></Hero>
+			<Hero />
+
+			{/* Info columns */}
+			<SegmentGroup />
 
 			{/* Initiatives section */}
-			<InitiativeList />
+			{/* <InitiativeList /> */}
 
 			{/* Mission */}
 			<Mission />

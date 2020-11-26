@@ -19,13 +19,13 @@ export default function NewsArticle() {
 		thumbUrl = imageUrl(article.thumbnail).url() || undefined;
 	}
 
-	console.log(article);
-
 	return (
 		<>
 			<Hero heading={article.title} imageURL={thumbUrl} />
-			<div style={{ maxWidth: '640px' }} className='mx-auto my-8'>
-				<i className='text-sm'>Published: {article.publish_date}</i>
+			<div style={{ maxWidth: '640px' }} className='mx-auto mt-4 mb-8'>
+				<i className='text-sm'>
+					{article.publish_date} - {article.author || 'No author'}
+				</i>
 				<br />
 				<Link to='/news'>Go to all news articles</Link>
 				<br />

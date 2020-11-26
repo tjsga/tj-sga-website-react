@@ -23,8 +23,6 @@ export default function ArticleList() {
 
 		let articles = await sanity.fetch<SGA.ArticleDocument[]>(query, params);
 
-		console.log(articles.length);
-
 		if (articles.length < 3) {
 			setReachedEnd(true);
 		}
@@ -47,18 +45,21 @@ export default function ArticleList() {
 				return <ArticleRow key={article._id} article={article} />;
 			})}
 
-			{!reachedEnd ? (
-				<button
-					onClick={() => {
-						let lastArticle = articles[articles.length - 1];
-						addArticles(lastArticle.publish_date, lastArticle.title);
-					}}
-				>
-					Load more articles
-				</button>
-			) : (
-				<div>No more articles to show</div>
-			)}
+			<div className='text-center'>
+				{!reachedEnd ? (
+					<button
+						className='button'
+						onClick={() => {
+							let lastArticle = articles[articles.length - 1];
+							addArticles(lastArticle.publish_date, lastArticle.title);
+						}}
+					>
+						Load more articles
+					</button>
+				) : (
+					<div>No more articles to show</div>
+				)}
+			</div>
 		</div>
 	);
 }

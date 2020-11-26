@@ -2,13 +2,15 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
 
+import './App.css';
+
 import index from './pages/index';
 import initiatives from './pages/initiatives';
 import news from './pages/news';
 import newsArticle from './pages/newsArticle';
 import notFound from './pages/404';
 
-function App() {
+export default function App() {
 	return (
 		<BrowserRouter>
 			<Layout>
@@ -23,5 +25,3 @@ function App() {
 		</BrowserRouter>
 	);
 }
-
-export default App;

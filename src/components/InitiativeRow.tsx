@@ -20,7 +20,9 @@ export default function InitiativeRow({
 				) : null}
 			</div>
 			<div style={{ flex: 3, padding: '10px' }}>
-				<h3>{initiative.name}</h3>
+				<h3 className='header'>
+					{initiative.name}
+				</h3>
 				<BlockContent blocks={initiative.content} />
 			</div>
 		</div>

@@ -10,6 +10,8 @@ declare namespace SGA {
 		title: string;
 		thumbnail: {};
 		content: any[];
+		author: string;
+		summary: string;
 		publish_date: string;
 		_id: string;
 	}

@@ -1,6 +1,6 @@
-import React from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 import imageUrl from '../imageUrl';
+import '../css/initiative.css';
 
 export default function InitiativeColumn({ name, thumbnail, content }) {
 	let thumbUrl: string | null = null;
@@ -9,12 +9,14 @@ export default function InitiativeColumn({ name, thumbnail, content }) {
 	}
 
 	return (
-		<div className='lg:w-1/3 w-full lg:px-4 mb-4'>
-			<h3 className='text-center font-bold text-3xl text-secondary mb-6'>
-				{name}
-			</h3>
-			{thumbUrl ? <img className='mb-4' src={thumbUrl} alt={name} /> : null}
-			<BlockContent blocks={content} style={{ fontSize: '1.5rem' }} />
+		<div>
+			<h3 className='header'>{name}</h3>
+			{thumbUrl ? (
+				<img className='initiative-img' src={thumbUrl} alt={name} />
+			) : null}
+			<div className='initiative-summary'>
+				<BlockContent blocks={content} />
+			</div>
 		</div>
 	);
 }

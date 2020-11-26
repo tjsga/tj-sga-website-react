@@ -26,9 +26,11 @@ export default function ArticleRow({
 			</div>
 			<div style={{ flex: 3, padding: '10px' }}>
 				<Link to={'/news/' + article._id + '/' + slug(article.title)}>
-					<h3 className='font-bold text-3xl mb-6'>{article.title}</h3>
+					<h3 className='font-bold text-3xl'>{article.title}</h3>
 				</Link>
-				<i className='text-sm'>{article.publish_date}</i>
+				<i className='text-sm'>
+					{article.publish_date} - {article.author || 'No author'}
+				</i>
 				<br />
 				<BlockContent blocks={article.content} />
 			</div>
