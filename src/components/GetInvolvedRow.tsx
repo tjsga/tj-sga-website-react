@@ -1,6 +1,6 @@
 export default function GetInvolvedRow({ way }: { way: SGA.GetInvolvedWay}) {
 	return (
-		<div className='row'>
+		<div className='row text-left'>
 			<div className='get-involved-title'>
 				<h3>{way.title}</h3>
 			</div>

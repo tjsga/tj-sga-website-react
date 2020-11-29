@@ -1,5 +1,6 @@
 .segment {
 	padding: 0px 17px;
+	text-align: center;
 }
 
 .segment-body {
@@ -7,4 +8,5 @@
 	font-size: 22px;
 	line-height: 33px;
 	font-weight: 300;
+	text-align: left;
 }

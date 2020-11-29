@@ -7,7 +7,7 @@ export default function InfoColumn({ title, content, imageURL, infoURL }) {
 			<h3>{title}</h3>
 			<img src={imageURL} alt={title} />
 			<p className='segment-body'>{content}</p>
-			<Link to={infoURL} className='segment-button'>
+			<Link to={infoURL} className='blue-button'>
 				MORE INFO
 			</Link>
 		</div>
