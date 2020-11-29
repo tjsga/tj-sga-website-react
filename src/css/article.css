@@ -22,3 +22,9 @@
   flex: 3;
   padding: 10px;
 }
+
+.article-paragraphs {
+	font-size: 22px;
+	line-height: 33px;
+	font-weight: 400;
+}

@@ -25,7 +25,7 @@ export default function ArticleRow({
 				) : null}
 			</div>
 			<div className='article-row-content'>
-				<Link to={'/news/' + article._id + '/' + slug(article.title)}>
+				<Link to={'/news/' + article._id + '/' + slug(article.title)} className="clickable-link">
 					<h3>{article.title}</h3>
 				</Link>
 				<i className='text-sm'>

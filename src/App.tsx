@@ -9,7 +9,7 @@ import initiatives from './pages/initiatives';
 import involved from './pages/involved';
 import mission from './pages/mission';
 import news from './pages/news';
-import newsArticle from './pages/newsArticle';
+import newsarticle from './pages/newsarticle';
 import notFound from './pages/404';
 import officers from './pages/officers';
 import committee from './pages/committee';
@@ -22,7 +22,7 @@ export default function App() {
 				<Switch>
 					<Route path='/initiatives' exact component={initiatives} />
 					<Route path='/involved' exact component={involved} />
-					<Route path='/news/:articleId' component={newsArticle} />
+					<Route path='/news/:articleId' component={newsarticle} />
 					<Route path='/news' exact component={news} />
 					<Route path='/mission' exact component={mission} />
 					<Route path='/officers' exact component={officers} />
