@@ -23,6 +23,23 @@ declare namespace SGA {
 		committee: 'excomm' | 'officer' | 'class';
 		role: string;
 		profile_photo: {};
-		bio: string
+		bio: string;
+	}
+
+	interface GetInvolvedWay {
+		_id: string;
+		title: string;
+		text: string;
+	};
+
+	interface GetInvolvedDocument {
+		ways: GetInvolvedWay[];
+	}
+
+	interface FooterDocument {
+		columns: {
+			_id: string;
+			content: any[];
+		}[];
 	}
 }

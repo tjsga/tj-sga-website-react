@@ -6,6 +6,7 @@ import './App.css';
 
 import index from './pages/index';
 import initiatives from './pages/initiatives';
+import involved from './pages/involved';
 import mission from './pages/mission';
 import news from './pages/news';
 import newsArticle from './pages/newsArticle';
@@ -20,6 +21,7 @@ export default function App() {
 			<Layout>
 				<Switch>
 					<Route path='/initiatives' exact component={initiatives} />
+					<Route path='/involved' exact component={involved} />
 					<Route path='/news/:articleId' component={newsArticle} />
 					<Route path='/news' exact component={news} />
 					<Route path='/mission' exact component={mission} />

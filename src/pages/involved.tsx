@@ -11,7 +11,7 @@ export default function GetInvolved() {
 	>();
 
 	React.useEffect(() => {
-		sanity.getDocument<SGA.GetInvolvedDocument>('ways').then(setWays);
+		sanity.getDocument<SGA.GetInvolvedDocument>('get_involved').then(setWays);
 	}, []);
 
 	return (
@@ -29,7 +29,7 @@ export default function GetInvolved() {
 				<>
 					<h3>Here are some ways to connect with SGA:</h3>
 					{ways.ways.map((way) => (
-						<GetInvolvedRow way={way} />
+						<GetInvolvedRow way={way} key={way._id} />
 					))}
 				</>
 			) : null}

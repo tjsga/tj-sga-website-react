@@ -1,0 +1,14 @@
+.get-involved-body {
+	color: #444;
+	font-size: 22px;
+	line-height: 33px;
+	font-weight: 300;
+}
+
+.get-involved-title {
+	flex: 1;
+}
+
+.get-involved-description {
+	flex: 3;
+}
