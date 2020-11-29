@@ -9,17 +9,14 @@ export default function Committee() {
 	);
 	// year desc because seniority 8)
 
-	if (!excomm) {
-		return null;
-	}
-
 	return (
 		<>
 			<Hero heading='Executive Committee' />
 			<div>
-				{excomm.map((member) => {
-					return <MemberRow member={member} />;
-				})}
+				{excomm &&
+					excomm.map((member) => {
+						return <MemberRow member={member} />;
+					})}
 			</div>
 		</>
 	);

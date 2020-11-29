@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import NewsAndMission from '../components/NewsAndMission';
 import SegmentGroup from '../components/SegmentGroup';
 
-const IndexPage = () => {
+export default function IndexPage() {
 	return (
 		<>
 			{/* Hero image */}
@@ -20,6 +20,4 @@ const IndexPage = () => {
 			<NewsAndMission />
 		</>
 	);
-};
-
-export default IndexPage;
+}

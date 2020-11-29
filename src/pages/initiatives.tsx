@@ -8,15 +8,11 @@ export default function Initiatives() {
 		'*[_type == "initiative"]'
 	);
 
-	if (!initiatives) {
-		return null;
-	}
-
 	return (
 		<>
 			<Hero heading='Initiatives'></Hero>
 			<div style={{ display: 'flex', flexDirection: 'column' }}>
-				{initiatives.map((initiative) => {
+				{initiatives && initiatives.map((initiative) => {
 					return <InitiativeRow initiative={initiative} />;
 				})}
 			</div>

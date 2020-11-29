@@ -8,16 +8,13 @@ export default function ClassCouncil() {
 		`*[_type == 'member' && role == 'class'] | order (year desc)`
 	);
 
-	if (!members) {
-		return null;
-	}
-
 	return (
 		<>
 			<Hero heading='Class Council' />
-			{members.map((member) => {
-				return <MemberRow key={member._id} member={member}></MemberRow>;
-			})}
+			{members &&
+				members.map((member) => {
+					return <MemberRow key={member._id} member={member}></MemberRow>;
+				})}
 		</>
 	);
 }
