@@ -2,6 +2,7 @@ import React from 'react';
 import imageUrl from '../imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
 import { Link } from 'react-router-dom';
+import "../css/article.css";
 
 export default function ArticleRow({
 	article,
