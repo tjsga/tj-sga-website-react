@@ -2,7 +2,7 @@ import React from 'react';
 import imageUrl from '../imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
 import { Link } from 'react-router-dom';
-import "../css/article.css";
+import '../css/article.css';
 
 export default function ArticleRow({
 	article,
@@ -36,7 +36,7 @@ export default function ArticleRow({
 				<br />
 				<i>{article.author || 'No author'}</i>
 				<br />
-				<BlockContent blocks={article.content} />
+				<p>{article.summary}</p>
 			</div>
 		</div>
 	);
