@@ -62,8 +62,8 @@ export default function Navbar() {
 			{pages.map((page) => {
 				if ('items' in page) {
 					return (
-						<div className='submenu-outer'>
-							<Link key={page.url} className='nav-link' to={page.url}>
+						<div className='submenu-outer' key={page.url}>
+							<Link className='nav-link' to={page.url}>
 								{page.title}
 							</Link>
 							<div className='submenu-content'>
