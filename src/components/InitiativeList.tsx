@@ -1,5 +1,5 @@
 import React from 'react';
-import useQuery from '../hooks/useInitiatives';
+import useQuery from '../hooks/useQuery';
 import InitiativeColumn from './InitiativeColumn';
 
 export default function InitiativeList() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Hero from '../components/Hero';
-import useQuery from '../hooks/useInitiatives';
+import useQuery from '../hooks/useQuery';
 import imageUrl from '../imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
 

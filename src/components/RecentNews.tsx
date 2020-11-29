@@ -1,4 +1,4 @@
-import useQuery from '../hooks/useInitiatives';
+import useQuery from '../hooks/useQuery';
 import ArticleRow from './ArticleRow';
 
 export default function RecentNews() {

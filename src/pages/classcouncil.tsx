@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import MemberRow from '../components/MemberRow';
-import useQuery from '../hooks/useInitiatives';
+import useQuery from '../hooks/useQuery';
 
 export default function ClassCouncil() {
 	let members = useQuery<SGA.MemberDocument[]>(

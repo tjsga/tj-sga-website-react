@@ -21,7 +21,7 @@ export default function Footer() {
 				{footer.columns.map((col) => {
 					return (
 						<div className='footer-col' key={col._id}>
-							<BlockContent blocks={col.content}></BlockContent>
+							<BlockContent blocks={col.content} />
 						</div>
 					);
 				})}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import InitiativeRow from '../components/InitiativeRow';
-import useQuery from '../hooks/useInitiatives';
+import useQuery from '../hooks/useQuery';
 
 export default function Initiatives() {
 	let initiatives = useQuery<SGA.InitiativeDocument[]>(
