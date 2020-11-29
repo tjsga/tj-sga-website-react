@@ -49,6 +49,10 @@ let pages = [
 			},
 		],
 	},
+	{
+		url: '/involved',
+		title: 'Get Involved',
+	},
 ];
 
 export function Submenu({ items }) {}
