@@ -15,7 +15,7 @@ export default function GetInvolved() {
 	}, []);
 
 	return (
-		<>
+		<div className='text-center'>
 			<Hero heading='Get Involved' />
 			<h3>SGA Calendar</h3>
 			<iframe
@@ -33,6 +33,9 @@ export default function GetInvolved() {
 					))}
 				</>
 			) : null}
-		</>
+			<a className='blue-button' href='https://goo.gl/forms/F3FXer4xpAF5SDhL2'>
+				Contact Us
+			</a>
+		</div>
 	);
 }
