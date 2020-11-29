@@ -25,12 +25,15 @@ export default function ArticleRow({
 				) : null}
 			</div>
 			<div className='article-row-content'>
-				<Link to={'/news/' + article._id + '/' + slug(article.title)} className="clickable-link">
+				<Link
+					to={'/news/' + article._id + '/' + slug(article.title)}
+					className='clickable-link'
+				>
 					<h3>{article.title}</h3>
 				</Link>
-				<i className='text-sm'>
-					{article.publish_date} - {article.author || 'No author'}
-				</i>
+				<i className='text-sm'>{article.publish_date}</i>
+				<br />
+				<i>{article.author || 'No author'}</i>
 				<br />
 				<BlockContent blocks={article.content} />
 			</div>

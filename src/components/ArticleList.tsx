@@ -49,7 +49,7 @@ export default function ArticleList() {
 			<div className='text-center'>
 				{!reachedEnd ? (
 					<button
-						className='load-more-button'
+						className='blue-button'
 						onClick={() => {
 							let lastArticle = articles[articles.length - 1];
 							addArticles(lastArticle.publish_date, lastArticle.title);

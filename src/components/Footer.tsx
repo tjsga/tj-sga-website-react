@@ -16,7 +16,6 @@ export default function Footer() {
 				src='/images/footer-banner.png'
 				alt='Footer Banner'
 			/>
-			<hr />
 			<div className='footer-container'>
 				{footer.columns.map((col) => {
 					return (

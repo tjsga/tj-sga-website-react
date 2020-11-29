@@ -17,17 +17,19 @@ export default function GetInvolved() {
 	return (
 		<div className='text-center'>
 			<Hero heading='Get Involved' />
-			<h3>SGA Calendar</h3>
+			<h2>SGA Calendar</h2>
 			<iframe
 				src='https://calendar.google.com/calendar/u/0/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k@group.calendar.google.com&ctz=America/New_York'
 				title='SGA Calendar'
 				width='800'
 				height='600'
 			/>
-			<hr />
+			<p className="get-involved-body">
+				Interested in getting involved with SGA? You can run for office, work on a project, or apply to a committee. If you just want to share an idea or concern or get to know your representatives, reach out to us at <b>sga@tjhsst.edu</b>!
+			</p>
 			{ways ? (
 				<>
-					<h3>Here are some ways to connect with SGA:</h3>
+					<h2>Here are some ways to connect with SGA:</h2>
 					{ways.ways.map((way) => (
 						<GetInvolvedRow way={way} key={way._id} />
 					))}

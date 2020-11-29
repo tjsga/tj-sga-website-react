@@ -2,6 +2,14 @@
 	padding: 0px 20px;
 }
 
+.mission-landing-page-text {
+	font-family: 'Arapey';
+	font-size: 33px;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 44px;
+}
+
 .mission-header {
 	font-size: 1.25rem;
 	font-weight: bold;

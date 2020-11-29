@@ -1,8 +1,3 @@
-.load-more-button {
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
 .article-list {
   display: flex;
   flex-direction: column;

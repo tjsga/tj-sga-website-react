@@ -61,8 +61,10 @@
 	border-radius: 0.25rem;
 	border-style: solid;
 	border-color: #38A3BD;
+	background-color: white;
 	color: #38A3BD;
 	display: inline-block;
+	cursor: pointer;
 }
 
 .clickable-link {
