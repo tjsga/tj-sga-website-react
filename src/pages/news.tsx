@@ -7,7 +7,9 @@ export default function News() {
 		<>
 			<Hero heading='News' />
 			<main>
-				<ArticleList />
+				<div style={{ paddingTop: '1em' }}>
+					<ArticleList />
+				</div>
 			</main>
 		</>
 	);

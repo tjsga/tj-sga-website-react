@@ -43,6 +43,10 @@
   cursor: pointer;
 }
 
+a.blue-button {
+  text-decoration: none;
+}
+
 .clickable-link {
   text-decoration: underline;
   color: #38A3BD;

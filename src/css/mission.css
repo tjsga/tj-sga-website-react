@@ -1,45 +1,48 @@
 .mission-box {
-	padding: 0px 20px;
+  padding: 0px 20px;
 }
 
 .mission-landing-page-text {
-	font-family: 'Arapey';
-	font-size: 33px;
-	font-style: italic;
-	font-weight: 500;
-	line-height: 44px;
+  font-family: 'Arapey';
+  font-size: 33px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 44px;
 }
 
 .mission-header {
-	font-size: 1.25rem;
-	font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  padding-right: 2em;
 }
 
 .mission-para {
-	font-size: 22px;
-	line-height: 33px;
-	font-weight: 300;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 300;
 }
 
 .mission-quote {
-	display: flex;
-	flex-direction: column;
-	margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
 }
 
 .mission-quote-text {
-	font-size: 2rem;
-	font-weight: 600;
-	font-style: italic;
-	font-family: 'Arapey';
-	width: 100%;
-	text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Arapey';
+  width: 100%;
+  text-align: center;
 }
 
 .mission-quote-author {
-	width: 100%;
-	text-align: right;
-	font-size: 20px;
-	display: inline-block;
-	padding-right: 200px;
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+  display: inline-block;
+  padding-right: 200px;
 }

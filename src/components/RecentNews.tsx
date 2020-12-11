@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import useQuery from '../hooks/useQuery';
 import ArticleRow from './ArticleRow';
 
@@ -12,10 +14,11 @@ export default function RecentNews() {
 
 	return (
 		<div>
-			<h3 className='text-center display-3'>Recent News</h3>
+			<h3 className='display-3'>Recent News</h3>
 			{news.map((article) => {
 				return <ArticleRow article={article} />;
 			})}
+			<Link to='/news'>All News</Link>
 		</div>
 	);
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import imageUrl from '../imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
+import '../css/article.css';
 
 export default function InitiativeRow({
 	initiative,
@@ -13,16 +14,12 @@ export default function InitiativeRow({
 	}
 
 	return (
-		<div style={{ display: 'flex' }}>
-			<div style={{ flex: 1, padding: '10px' }}>
-				{thumbUrl ? (
-					<img className='mb-4' src={thumbUrl} alt={initiative.name} />
-				) : null}
+		<div className='d-flex'>
+			<div className='article-row-thumbnail'>
+				{thumbUrl ? <img src={thumbUrl} alt={initiative.name} /> : null}
 			</div>
-			<div style={{ flex: 3, padding: '10px' }}>
-				<h3 className='header'>
-					{initiative.name}
-				</h3>
+			<div className='article-row-content'>
+				<h3 className='header'>{initiative.name}</h3>
 				<BlockContent blocks={initiative.content} />
 			</div>
 		</div>

@@ -18,7 +18,7 @@ export default function GetInvolved() {
 		<>
 			<Hero heading='Get Involved' />
 			<main className='text-center'>
-				<h2>SGA Calendar</h2>
+				<h2 className='my-2'>SGA Calendar</h2>
 				<iframe
 					src='https://calendar.google.com/calendar/u/0/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k@group.calendar.google.com&ctz=America/New_York'
 					title='SGA Calendar'

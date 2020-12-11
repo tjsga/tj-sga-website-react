@@ -1,38 +1,39 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Hero from '../components/Hero';
-import useQuery from '../hooks/useQuery';
 import imageUrl from '../imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
+import sanity from '../sanity';
 import '../css/article.css';
 
 export default function NewsArticle() {
 	let { articleId } = useParams<{ articleId: string }>();
-	let article = useQuery<SGA.ArticleDocument>('*[_id == $articleId] [0]', {
-		articleId,
-	});
+	let [article, setArticle] = React.useState<SGA.ArticleDocument>(null!);
 
-	let thumbUrl: string | undefined = undefined;
+	React.useEffect(() => {
+		sanity.fetch('*[_id == $articleId] [0]', { articleId }).then(setArticle);
+	}, [articleId]);
+
+	let thumbUrl: string | null = null;
 	if (article?.thumbnail) {
-		thumbUrl = imageUrl(article.thumbnail).url() || undefined;
+		thumbUrl = imageUrl(article.thumbnail).url();
 	} else {
 		thumbUrl = '/images/hero.png';
 	}
 
 	return (
 		<>
-			<Hero heading='News' imageURL={thumbUrl} />
+			<Hero heading='News' imageURL={thumbUrl || undefined} />
 			<main>
-				<Link to='/news' className='clickable-link'>
-					Go to all news articles
-				</Link>
-				<br />
 				{article ? (
 					<div style={{ maxWidth: '640px', margin: '2rem auto' }}>
+						<Link to='/news' className='clickable-link'>
+							Go to all news articles
+						</Link>
 						<h1>{article.title}</h1>
-						<i className='text-sm'>{article.publish_date}</i>
-						<br />
-						<i>{article.author || 'No author'}</i>
+						<i>
+							Posted {article.publish_date} by {article.author || 'No author'}
+						</i>
 						<br />
 						{/* Wrap the BlockContent in a div because it expands to <></> */}
 						<div className='article-paragraphs'>

@@ -18,11 +18,9 @@ export default function ArticleRow({
 	};
 
 	return (
-		<div className='row'>
+		<div className='d-flex'>
 			<div className='article-row-thumbnail'>
-				{thumbUrl ? (
-					<img className='mb-4' src={thumbUrl} alt={article.title} />
-				) : null}
+				{thumbUrl ? <img src={thumbUrl} alt={article.title} /> : null}
 			</div>
 			<div className='article-row-content'>
 				<Link

@@ -19,20 +19,19 @@ export default function Mission() {
 							— {mission.quote_author}
 						</span>
 					</div>
-					<div className='row'>
-						<div className='flex-1'>
+					<div className='d-flex'>
+						<div className='flex-1 p-2'>
 							<span className='mission-header'>Vision</span>
 						</div>
-						<div className='flex-2'>
+						<div className='flex-2 p-2'>
 							<p className='mission-para'>{mission.vision}</p>
 						</div>
 					</div>
-					<hr />
-					<div className='row'>
-						<div className='flex-1'>
+					<div className='d-flex'>
+						<div className='flex-1 p-2'>
 							<span className='mission-header'>Mission</span>
 						</div>
-						<div className='flex-2'>
+						<div className='flex-2 p-2'>
 							<p className='mission-para'>{mission.mission}</p>
 						</div>
 					</div>

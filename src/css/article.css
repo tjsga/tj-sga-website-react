@@ -5,17 +5,16 @@
 
 .article-row-thumbnail {
   flex: 1;
-  padding: 10px;
-  /* 
-		To center the image
-	*/
-  /* display: flex;
-align-items: center; */
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1em;
 }
 
 .article-row-content {
   flex: 3;
-  padding: 10px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 1em;
 }
 
 .article-paragraphs {

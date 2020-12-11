@@ -12,6 +12,7 @@
 }
 
 .segment-title {
-  margin: 10px 0px;
-  font-weight: 600;
+  margin: 1em 0px;
+  font-size: 1.75rem;
+  font-weight: 500;
 }
