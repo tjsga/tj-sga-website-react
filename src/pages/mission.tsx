@@ -10,7 +10,7 @@ export default function Mission() {
 		<>
 			<Hero heading='Mission and History' />
 			{mission ? (
-				<div>
+				<main>
 					<div className='mission-quote'>
 						<span className='mission-quote-text'>“{mission.quote_text}”</span>
 						<br />
@@ -44,7 +44,7 @@ export default function Mission() {
 							Previous Leadership
 						</a>
 					</div>
-				</div>
+				</main>
 			) : null}
 		</>
 	);

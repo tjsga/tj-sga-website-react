@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .nav-link {
   display: block;
   padding: 10px;

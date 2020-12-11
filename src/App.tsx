@@ -14,10 +14,11 @@ const notfound = React.lazy(() => import('./pages/404'));
 const officers = React.lazy(() => import('./pages/officers'));
 const committee = React.lazy(() => import('./pages/committee'));
 const classcouncil = React.lazy(() => import('./pages/classcouncil'));
+const loading = () => <h1>Loading...</h1>;
 
 export default function App() {
 	return (
-		<Suspense fallback="Loading...">
+		<Suspense fallback={loading}>
 			<BrowserRouter>
 				<Layout>
 					<Switch>

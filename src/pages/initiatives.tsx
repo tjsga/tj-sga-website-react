@@ -10,12 +10,15 @@ export default function Initiatives() {
 
 	return (
 		<>
-			<Hero heading='Initiatives'></Hero>
-			<div style={{ display: 'flex', flexDirection: 'column' }}>
-				{initiatives && initiatives.map((initiative) => {
-					return <InitiativeRow initiative={initiative} />;
-				})}
-			</div>
+			<Hero heading='Initiatives' />
+			<main>
+				<div style={{ display: 'flex', flexDirection: 'column' }}>
+					{initiatives &&
+						initiatives.map((initiative) => {
+							return <InitiativeRow initiative={initiative} />;
+						})}
+				</div>
+			</main>
 		</>
 	);
 }

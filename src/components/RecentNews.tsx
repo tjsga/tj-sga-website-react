@@ -12,7 +12,7 @@ export default function RecentNews() {
 
 	return (
 		<div>
-			<h3 className='header'>Recent News</h3>
+			<h3 className='text-center display-3'>Recent News</h3>
 			{news.map((article) => {
 				return <ArticleRow article={article} />;
 			})}

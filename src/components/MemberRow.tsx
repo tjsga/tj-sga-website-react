@@ -1,4 +1,5 @@
 import imageUrl from '../imageUrl';
+import '../css/article.css';
 
 export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
 	let thumbUrl: string | null = null;
@@ -15,7 +16,9 @@ export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
 			</div>
 			<div className='article-row-content'>
 				<h3>{member.name}</h3>
-				<i>{member.role}, {member.year}</i>
+				<i>
+					{member.role}, {member.year}
+				</i>
 				<br />
 				<p>{member.bio}</p>
 			</div>

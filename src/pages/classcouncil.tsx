@@ -11,10 +11,12 @@ export default function ClassCouncil() {
 	return (
 		<>
 			<Hero heading='Class Council' />
-			{members &&
-				members.map((member) => {
-					return <MemberRow key={member._id} member={member}></MemberRow>;
-				})}
+			<main>
+				{members &&
+					members.map((member) => {
+						return <MemberRow key={member._id} member={member}></MemberRow>;
+					})}
+			</main>
 		</>
 	);
 }

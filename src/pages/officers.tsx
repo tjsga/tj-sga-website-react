@@ -15,13 +15,13 @@ export default function Officers() {
 	return (
 		<>
 			<Hero heading='Officers' />
-			<div>
+			<main>
 				{officers
 					? officers.map((officer) => {
 							return <MemberRow member={officer} />;
 					  })
 					: null}
-			</div>
+			</main>
 		</>
 	);
 }

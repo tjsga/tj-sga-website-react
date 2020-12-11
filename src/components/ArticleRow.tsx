@@ -1,6 +1,5 @@
 import React from 'react';
 import imageUrl from '../imageUrl';
-import BlockContent from '@sanity/block-content-to-react';
 import { Link } from 'react-router-dom';
 import '../css/article.css';
 
@@ -30,13 +29,13 @@ export default function ArticleRow({
 					to={'/news/' + article._id + '/' + slug(article.title)}
 					className='clickable-link'
 				>
-					<h3>{article.title}</h3>
+					<h3 style={{ margin: '0px' }}>{article.title}</h3>
 				</Link>
 				<i className='text-sm'>{article.publish_date}</i>
 				<br />
 				<i>{article.author || 'No author'}</i>
 				<br />
-				<p>{article.summary}</p>
+				<p style={{ marginBottom: '0px' }}>{article.summary}</p>
 			</div>
 		</div>
 	);

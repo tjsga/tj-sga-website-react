@@ -6,7 +6,9 @@ export default function News() {
 	return (
 		<>
 			<Hero heading='News' />
-			<ArticleList />
+			<main>
+				<ArticleList />
+			</main>
 		</>
 	);
 }

@@ -1,12 +1,17 @@
 .segment {
-	padding: 0px 17px;
-	text-align: center;
+  padding: 0px 17px;
+  text-align: center;
 }
 
 .segment-body {
-	color: #444;
-	font-size: 22px;
-	line-height: 33px;
-	font-weight: 300;
-	text-align: left;
+  color: #444;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.segment-title {
+  margin: 10px 0px;
+  font-weight: 600;
 }

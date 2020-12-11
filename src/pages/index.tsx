@@ -9,15 +9,15 @@ export default function IndexPage() {
 			{/* Hero image */}
 			<Hero />
 
-			<hr />
+			<main>
+				{/* Info columns */}
+				<SegmentGroup />
 
-			{/* Info columns */}
-			<SegmentGroup />
+				<hr />
 
-			<hr />
-
-			{/* Mission */}
-			<NewsAndMission />
+				{/* Mission */}
+				<NewsAndMission />
+			</main>
 		</>
 	);
 }

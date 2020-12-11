@@ -6,11 +6,11 @@
 .article-row-thumbnail {
   flex: 1;
   padding: 10px;
-  /*
+  /* 
 		To center the image
 	*/
-  display: flex;
-  align-items: center;
+  /* display: flex;
+align-items: center; */
 }
 
 .article-row-content {
@@ -19,7 +19,7 @@
 }
 
 .article-paragraphs {
-	font-size: 22px;
-	line-height: 33px;
-	font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 400;
 }

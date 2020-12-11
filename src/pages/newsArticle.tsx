@@ -22,27 +22,29 @@ export default function NewsArticle() {
 	return (
 		<>
 			<Hero heading='News' imageURL={thumbUrl} />
-			<Link to='/news' className='clickable-link'>
-				Go to all news articles
-			</Link>
-			<br />
-			{article ? (
-				<div style={{ maxWidth: '640px', margin: '2rem auto' }}>
-					<h1>{article.title}</h1>
-					<i className='text-sm'>{article.publish_date}</i>
-					<br />
-					<i>{article.author || 'No author'}</i>
-					<br />
-					{/* Wrap the BlockContent in a div because it expands to <></> */}
-					<div className='article-paragraphs'>
-						<BlockContent blocks={article.content} />
+			<main>
+				<Link to='/news' className='clickable-link'>
+					Go to all news articles
+				</Link>
+				<br />
+				{article ? (
+					<div style={{ maxWidth: '640px', margin: '2rem auto' }}>
+						<h1>{article.title}</h1>
+						<i className='text-sm'>{article.publish_date}</i>
+						<br />
+						<i>{article.author || 'No author'}</i>
+						<br />
+						{/* Wrap the BlockContent in a div because it expands to <></> */}
+						<div className='article-paragraphs'>
+							<BlockContent blocks={article.content} />
+						</div>
+						<br />
+						<Link to='/news' className='clickable-link'>
+							Go to all news articles
+						</Link>
 					</div>
-					<br />
-					<Link to='/news' className='clickable-link'>
-						Go to all news articles
-					</Link>
-				</div>
-			) : null}
+				) : null}
+			</main>
 		</>
 	);
 }

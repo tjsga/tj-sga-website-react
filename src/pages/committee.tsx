@@ -12,12 +12,14 @@ export default function Committee() {
 	return (
 		<>
 			<Hero heading='Executive Committee' />
-			<div>
-				{excomm &&
-					excomm.map((member) => {
-						return <MemberRow member={member} />;
-					})}
-			</div>
+			<main>
+				<div>
+					{excomm &&
+						excomm.map((member) => {
+							return <MemberRow member={member} />;
+						})}
+				</div>
+			</main>
 		</>
 	);
 }

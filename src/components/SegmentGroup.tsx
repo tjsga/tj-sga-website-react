@@ -2,7 +2,7 @@ import Segment from './Segment';
 
 export default function InfoColumnGroup() {
 	return (
-		<div className='row'>
+		<div className='d-flex'>
 			<Segment
 				imageURL='/images/segment-1.jpg'
 				title='News and Happenings'
