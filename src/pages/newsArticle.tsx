@@ -14,7 +14,7 @@ export default function NewsArticle() {
 		sanity.fetch('*[_id == $articleId] [0]', { articleId }).then(setArticle);
 	}, [articleId]);
 
-	let thumbUrl: string | null = null;
+	let thumbUrl: string;
 	if (article?.thumbnail) {
 		thumbUrl = imageUrl(article.thumbnail).url();
 	} else {
@@ -36,7 +36,21 @@ export default function NewsArticle() {
 						</i>
 						<br />
 						{/* Wrap the BlockContent in a div because it expands to <></> */}
-						<div className='article-paragraphs'>
+						<div
+							id='article-content'
+							className='article-paragraphs'
+							ref={(ref) => {
+								/*
+								When this element loads, convert all the links to have target="_blank."
+								This ensures that the links open in a new tab
+								*/
+								if (ref) {
+									ref.querySelectorAll('a').forEach((link) => {
+										link.target = '_blank';
+									});
+								}
+							}}
+						>
 							<BlockContent blocks={article.content} />
 						</div>
 						<br />
