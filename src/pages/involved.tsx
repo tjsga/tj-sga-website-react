@@ -1,5 +1,6 @@
 import { SanityDocument } from '@sanity/client';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GetInvolvedRow from '../components/GetInvolvedRow';
 import Hero from '../components/Hero';
 import '../css/get-involved.css';
@@ -25,7 +26,7 @@ export default function GetInvolved() {
 					width='800'
 					height='600'
 				/>
-				<p className='get-involved-body'>
+				<p className='get-involved-body my-4'>
 					Interested in getting involved with SGA? You can run for office, work
 					on a project, or apply to a committee. If you just want to share an
 					idea or concern or get to know your representatives, reach out to us
@@ -33,18 +34,17 @@ export default function GetInvolved() {
 				</p>
 				{ways ? (
 					<>
-						<h2>Here are some ways to connect with SGA:</h2>
+						<h2 style={{ marginTop: '4rem', marginBottom: '1.5rem' }}>
+							Here are some ways to connect with SGA:
+						</h2>
 						{ways.ways.map((way) => (
 							<GetInvolvedRow way={way} key={way._id} />
 						))}
 					</>
 				) : null}
-				<a
-					className='blue-button'
-					href='https://goo.gl/forms/F3FXer4xpAF5SDhL2'
-				>
-					Contact Us
-				</a>
+				<Link className='blue-button' to='/feedback'>
+					Give Feedback
+				</Link>
 			</main>
 		</>
 	);
