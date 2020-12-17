@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+console.log(
+	"%cThis app is available on Github, if you're interested in the code!",
+	'font-size: 20px'
+);
+console.log(
+	'%chttps://github.com/tjsga/tj-sga-website-react',
+	'font-size: 20px'
+);
+
 ReactDOM.render(
 	<React.StrictMode>
 		<App />

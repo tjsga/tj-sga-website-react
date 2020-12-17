@@ -19,7 +19,7 @@ export default function Committee() {
 				<div>
 					{excomm &&
 						excomm.map((member) => {
-							return <MemberRow member={member} />;
+							return <MemberRow key={member._id} member={member} />;
 						})}
 				</div>
 			</main>

@@ -90,9 +90,8 @@ export default function Navbar() {
 										// Treat external links differently; add 'target=_blank' so they
 										// open in a new window
 										return (
-											<>
+											<div key={item.title}>
 												<a
-													key={item.url}
 													className='submenu-link'
 													href={item.url}
 													target='_blank'
@@ -101,20 +100,16 @@ export default function Navbar() {
 													{item.title}
 												</a>
 												<br />
-											</>
+											</div>
 										);
 									}
 									return (
-										<>
-											<Link
-												key={item.url}
-												className='submenu-link'
-												to={item.url}
-											>
+										<div key={item.title}>
+											<Link className='submenu-link' to={item.url}>
 												{item.title}
 											</Link>
 											<br />
-										</>
+										</div>
 									);
 								})}
 							</div>
@@ -122,7 +117,7 @@ export default function Navbar() {
 					);
 				} else {
 					return (
-						<Link key={page.url} className='nav-link' to={page.url}>
+						<Link key={page.title} className='nav-link' to={page.url}>
 							{page.title}
 						</Link>
 					);
