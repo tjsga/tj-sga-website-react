@@ -17,8 +17,18 @@ let pages = [
 		],
 	},
 	{
-		url: '/news',
+		url: '#',
 		title: 'News',
+		items: [
+			{
+				url: '/news',
+				title: 'News',
+			},
+			{
+				url: '#',
+				title: 'Newsletter (In development!)',
+			},
+		],
 	},
 	{
 		url: '/initiatives',
@@ -72,14 +82,39 @@ export default function Navbar() {
 							</Link>
 							<div className='submenu-content'>
 								{/* Most of these are external so we use <a> tags instead of <Link> */}
-								{page.items?.map((item) => (
-									<>
-										<a key={item.url} className='submenu-link' href={item.url}>
-											{item.title}
-										</a>
-										<br />
-									</>
-								))}
+								{page.items?.map((item) => {
+									let isExternal = /https?:\/\//.test(item.url);
+									if (isExternal) {
+										// Treat external links differently; add 'target=_blank' so they
+										// open in a new window
+										return (
+											<>
+												<a
+													key={item.url}
+													className='submenu-link'
+													href={item.url}
+													target='_blank'
+													rel='noreferrer'
+												>
+													{item.title}
+												</a>
+												<br />
+											</>
+										);
+									}
+									return (
+										<>
+											<Link
+												key={item.url}
+												className='submenu-link'
+												to={item.url}
+											>
+												{item.title}
+											</Link>
+											<br />
+										</>
+									);
+								})}
 							</div>
 						</div>
 					);

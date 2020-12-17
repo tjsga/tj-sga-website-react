@@ -18,7 +18,7 @@ export default function ArticleRow({
 	};
 
 	return (
-		<div className='d-flex'>
+		<div className='d-flex my-4'>
 			<div className='article-row-thumbnail'>
 				{thumbUrl ? <img src={thumbUrl} alt={article.title} /> : null}
 			</div>
@@ -26,6 +26,7 @@ export default function ArticleRow({
 				<Link
 					to={'/news/' + article._id + '/' + slug(article.title)}
 					className='clickable-link'
+					target='_blank'
 				>
 					<h3 style={{ margin: '0px' }}>{article.title}</h3>
 				</Link>
