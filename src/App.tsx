@@ -14,7 +14,20 @@ const notfound = React.lazy(() => import('./pages/404'));
 const officers = React.lazy(() => import('./pages/officers'));
 const committee = React.lazy(() => import('./pages/committee'));
 const classcouncil = React.lazy(() => import('./pages/classcouncil'));
-const loading = () => <h1>Loading...</h1>;
+const loading = (
+	<div
+		style={{
+			width: '100vw',
+			height: '100vh',
+			textAlign: 'center',
+			display: 'flex',
+			alignItems: 'center',
+		}}
+	>
+		<h3 style={{ textAlign: 'center', width: '100vw' }}>Loading...</h3>
+	</div>
+);
+const feedback = React.lazy(() => import('./pages/feedback'));
 
 export default function App() {
 	return (
@@ -30,6 +43,7 @@ export default function App() {
 						<Route path='/officers' exact component={officers} />
 						<Route path='/committee' exact component={committee} />
 						<Route path='/class-council' exact component={classcouncil} />
+						<Route path='/feedback' exact component={feedback} />
 						<Route path='/:path' component={notfound} />
 						<Route path='/' exact component={index} />
 					</Switch>

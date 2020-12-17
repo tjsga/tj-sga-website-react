@@ -63,20 +63,22 @@ let pages = [
 		url: '/involved',
 		title: 'Get Involved',
 	},
+	{
+		url: '/feedback',
+		title: 'Feedback',
+	},
 ];
-
-export function Submenu({ items }) {}
 
 export default function Navbar() {
 	return (
 		<div className='nav'>
-			<Link to='/'>
+			<Link to='/' key='/'>
 				<img src='/images/banner.png' alt='TJ SGA' className='nav-logo' />
 			</Link>
 			{pages.map((page) => {
 				if ('items' in page) {
 					return (
-						<div className='submenu-outer' key={page.title}>
+						<div key={page.title} className='submenu-outer'>
 							<Link className='nav-link' to={page.url}>
 								{page.title}
 							</Link>

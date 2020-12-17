@@ -16,7 +16,7 @@ export default function RecentNews() {
 		<div>
 			<h3 className='display-3'>Recent News</h3>
 			{news.map((article) => {
-				return <ArticleRow article={article} />;
+				return <ArticleRow article={article} key={article._id} />;
 			})}
 			<Link to='/news'>All News</Link>
 		</div>

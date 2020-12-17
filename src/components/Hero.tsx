@@ -17,8 +17,8 @@ export default function Hero({
 				alt='Background'
 				style={{
 					width: '100vw',
-					height: '60vh',
-					objectFit: 'cover',
+					maxHeight: '60vh',
+					objectFit: 'contain',
 				}}
 			/>
 		</div>

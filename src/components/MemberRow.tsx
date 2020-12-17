@@ -8,7 +8,7 @@ export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
 	}
 
 	return (
-		<div className='row'>
+		<div className='d-flex my-4'>
 			<div className='article-row-thumbnail'>
 				{thumbUrl ? (
 					<img className='mb-4' src={thumbUrl} alt={member.name} />

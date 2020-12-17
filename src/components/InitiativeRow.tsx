@@ -14,7 +14,7 @@ export default function InitiativeRow({
 	}
 
 	return (
-		<div className='d-flex'>
+		<div className='d-flex my-4'>
 			<div className='article-row-thumbnail'>
 				{thumbUrl ? <img src={thumbUrl} alt={initiative.name} /> : null}
 			</div>

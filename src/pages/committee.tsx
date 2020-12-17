@@ -11,7 +11,10 @@ export default function Committee() {
 
 	return (
 		<>
-			<Hero heading='Executive Committee' />
+			<Hero
+				heading='Executive Committee'
+				imageURL='/images/who-we-are/excomm.png'
+			/>
 			<main>
 				<div>
 					{excomm &&

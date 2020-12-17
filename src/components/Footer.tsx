@@ -17,9 +17,9 @@ export default function Footer() {
 				alt='Footer Banner'
 			/>
 			<div className='footer-container'>
-				{footer.columns.map((col) => {
+				{footer.columns.map((col, index) => {
 					return (
-						<div className='footer-col' key={col._id}>
+						<div className='footer-col' key={index}>
 							<BlockContent blocks={col.content} />
 						</div>
 					);

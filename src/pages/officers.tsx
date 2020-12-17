@@ -14,7 +14,7 @@ export default function Officers() {
 
 	return (
 		<>
-			<Hero heading='Officers' />
+			<Hero heading='Officers' imageURL='/images/who-we-are/officers.jpg' />
 			<main>
 				{officers
 					? officers.map((officer) => {
