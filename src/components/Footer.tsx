@@ -13,7 +13,7 @@ export default function Footer() {
 		<section className='footer-wrapper'>
 			<img
 				className='footer-banner'
-				src='/images/footer-banner.png'
+				src='/images/footer-banner.jpg'
 				alt='Footer Banner'
 			/>
 			<div className='footer-container'>

@@ -6,7 +6,7 @@ type HeroProps = {
 };
 
 export default function Hero({
-	imageURL = '/images/hero.png',
+	imageURL = '/images/hero.jpg',
 	heading = 'TJHSST SGA',
 }: HeroProps) {
 	return (
