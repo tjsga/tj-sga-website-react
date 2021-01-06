@@ -5,6 +5,7 @@ import '../css/mission.css';
 import BlueButtonLink from '../components/BlueButtonLink';
 import Centered from '../components/Centered';
 import ParagraphWithHeader from '../components/ParagraphWithHeader';
+import { SGA_PREVIOUS_LEADERSHIP_URL } from '../lib/constants';
 
 function MissionQuote({ text, author }) {
 	return (
@@ -16,9 +17,6 @@ function MissionQuote({ text, author }) {
 		</div>
 	);
 }
-
-const previousLeadershipLink =
-	'https://docs.google.com/spreadsheets/d/1a3RYdqrDi1IPG9BKWQ2xhoX3YCPQKUl_FsRLvIVEMPg/edit?usp=drive_open&ouid=0';
 
 export default function Mission() {
 	let mission = useMission();
@@ -38,7 +36,7 @@ export default function Mission() {
 					<ParagraphWithHeader title='Inspiration' body={mission.inspiration} />
 
 					<Centered>
-						<BlueButtonLink href={previousLeadershipLink}>
+						<BlueButtonLink href={SGA_PREVIOUS_LEADERSHIP_URL}>
 							Previous Leadership
 						</BlueButtonLink>
 					</Centered>

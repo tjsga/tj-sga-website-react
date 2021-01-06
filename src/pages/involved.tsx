@@ -7,6 +7,9 @@ import ParagraphWithHeader from '../components/ParagraphWithHeader';
 import StrongParagraph from '../components/StrongParagraph';
 import sanity from '../sanity';
 
+const SGA_CALENDAR_URL =
+	'https://calendar.google.com/calendar/u/0/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k@group.calendar.google.com&ctz=America/New_York';
+
 export default function GetInvolved() {
 	let [getInvolved, setGetInvolved] = React.useState<
 		SanityDocument<SGA.GetInvolvedDocument> | undefined
@@ -25,7 +28,7 @@ export default function GetInvolved() {
 				<ParagraphHeader>SGA Calendar</ParagraphHeader>
 
 				<iframe
-					src='https://calendar.google.com/calendar/u/0/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k@group.calendar.google.com&ctz=America/New_York'
+					src={SGA_CALENDAR_URL}
 					title='SGA Calendar'
 					width='800'
 					height='600'

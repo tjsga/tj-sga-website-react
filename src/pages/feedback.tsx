@@ -1,8 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-
-const feedbackFormURL =
-	'https://docs.google.com/forms/d/e/1FAIpQLSeO8CN666WSb-jw0johyLMLb00rFz-bCtXaPeWpTSvbSqBBLw/viewform?embedded=true';
+import { SGA_FEEDBACK_FORM_URL } from '../lib/constants';
 
 export default function FeedbackPage() {
 	return (
@@ -10,7 +8,7 @@ export default function FeedbackPage() {
 			<Hero heading='Feedback' />
 			<main className='text-center'>
 				<iframe
-					src={feedbackFormURL}
+					src={SGA_FEEDBACK_FORM_URL}
 					style={{
 						width: '640px',
 						height: '900px',
