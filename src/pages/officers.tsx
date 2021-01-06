@@ -26,7 +26,6 @@ export default function Officers() {
 	const officerList = officersSorted.map((officer) => (
 		<MemberRow member={officer} />
 	));
-	console.log(officersSorted);
 
 	return (
 		<>

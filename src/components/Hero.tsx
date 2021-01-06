@@ -1,14 +1,12 @@
 import '../css/hero.css';
 
-type HeroProps = {
-	imageURL?: string;
-	heading?: string;
-};
-
 export default function Hero({
 	imageURL = '/images/hero.jpg',
 	heading = 'TJHSST SGA',
-}: HeroProps) {
+}: {
+	imageURL?: string;
+	heading?: string;
+}) {
 	return (
 		<div className='hero'>
 			<span className='hero-heading'>{heading}</span>

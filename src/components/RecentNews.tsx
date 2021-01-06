@@ -2,22 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useQuery from '../hooks/useQuery';
 import ArticleRow from './ArticleRow';
+import PrimaryHeader from './PrimaryHeader';
 
 export default function RecentNews() {
-	let news = useQuery<SGA.ArticleDocument[]>(
-		`*[_type == 'article'] | order (publish_date desc, title) [0...3]`
-	);
+	const articles =
+		useQuery<SGA.ArticleDocument[]>(
+			`*[_type == 'article'] | order (publish_date desc, title) [0...3]`
+		) ?? [];
 
-	if (!news) {
-		return null;
-	}
+	const articleList = articles.map((article) => (
+		<ArticleRow article={article} key={article._id} />
+	));
 
 	return (
 		<div>
-			<h3 className='display-3'>Recent News</h3>
-			{news.map((article) => {
-				return <ArticleRow article={article} key={article._id} />;
-			})}
+			<PrimaryHeader>Recent News</PrimaryHeader>
+			{articleList}
 			<Link to='/news'>All News</Link>
 		</div>
 	);

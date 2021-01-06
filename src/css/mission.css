@@ -10,20 +10,6 @@
   line-height: 44px;
 }
 
-.mission-header {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: right;
-  display: block;
-  padding-right: 2em;
-}
-
-.mission-para {
-  font-size: 22px;
-  line-height: 33px;
-  font-weight: 300;
-}
-
 .mission-quote {
   display: flex;
   flex-direction: column;

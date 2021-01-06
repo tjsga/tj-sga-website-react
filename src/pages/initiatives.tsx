@@ -1,4 +1,5 @@
 import React from 'react';
+import FlexColumn from '../components/FlexColumn';
 import Hero from '../components/Hero';
 import InitiativeRow from '../components/InitiativeRow';
 import useQuery from '../hooks/useQuery';
@@ -11,11 +12,11 @@ export default function Initiatives() {
 		<>
 			<Hero heading='Initiatives' />
 			<main>
-				<div style={{ display: 'flex', flexDirection: 'column' }}>
+				<FlexColumn>
 					{initiatives.map((initiative) => (
 						<InitiativeRow initiative={initiative} />
 					))}
-				</div>
+				</FlexColumn>
 			</main>
 		</>
 	);

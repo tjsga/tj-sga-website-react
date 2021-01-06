@@ -51,3 +51,18 @@ a.blue-button {
   text-decoration: underline;
   color: #38A3BD;
 }
+
+.strong-paragraph {
+  color: #444;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 300;
+}
+
+.paragraph-with-header-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  padding-right: 2em;
+}

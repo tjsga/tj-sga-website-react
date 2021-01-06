@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
 import useNewsArticle from '../hooks/useNewsArticle';
-import LocalLinkClickable from '../components/LocalLinkClickable';
+import ClickableLink from '../components/ClickableLink';
 import BlockContentWithExternalLinks from '../components/BlockContentWithExternalLinks';
 import PrimaryHeader from '../components/PrimaryHeader';
 
@@ -18,7 +18,7 @@ export default function NewsArticle() {
 	}
 
 	const goToAllNewsArticles = (
-		<LocalLinkClickable to='/news'>Go to all news articles</LocalLinkClickable>
+		<ClickableLink href='/news'>Go to all news articles</ClickableLink>
 	);
 
 	return (
@@ -33,7 +33,7 @@ export default function NewsArticle() {
 							Posted {article.publish_date} by {article.author || 'No author'}
 						</i>
 						<br />
-						<div id='article-content' className='article-paragraphs'>
+						<div className='article-paragraphs'>
 							<BlockContentWithExternalLinks blocks={article.content} />
 						</div>
 						<br />

@@ -4,6 +4,7 @@ import useMission from '../hooks/useMission';
 import '../css/mission.css';
 import BlueButtonLink from '../components/BlueButtonLink';
 import Centered from '../components/Centered';
+import ParagraphWithHeader from '../components/ParagraphWithHeader';
 
 function MissionQuote({ text, author }) {
 	return (
@@ -12,19 +13,6 @@ function MissionQuote({ text, author }) {
 			<br />
 			<br />
 			<span className='mission-quote-author'>— {author}</span>
-		</div>
-	);
-}
-
-function MissionParagraph({ title, body }: { title: string; body: string }) {
-	return (
-		<div className='d-flex'>
-			<div className='flex-1 p-2'>
-				<span className='mission-header'>{title}</span>
-			</div>
-			<div className='flex-2 p-2'>
-				<p className='mission-para'>{body}</p>
-			</div>
 		</div>
 	);
 }
@@ -45,8 +33,8 @@ export default function Mission() {
 						text={mission.quote_text}
 					/>
 
-					<MissionParagraph title='Vision' body={mission.vision} />
-					<MissionParagraph title='Mission' body={mission.mission} />
+					<ParagraphWithHeader title='Vision' body={mission.vision} />
+					<ParagraphWithHeader title='Mission' body={mission.mission} />
 
 					<Centered>
 						<BlueButtonLink href={previousLeadershipLink}>

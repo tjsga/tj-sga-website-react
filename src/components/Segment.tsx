@@ -1,15 +1,28 @@
-import { Link } from 'react-router-dom';
 import '../css/segment.css';
+import BlueButtonLink from './BlueButtonLink';
 
-export default function InfoColumn({ title, content, imageURL, infoURL }) {
+function SegmentHeader({ children }: { children: React.ReactNode }) {
+	return (
+		<h3
+			style={{
+				margin: '1em 0px',
+				fontSize: '1.75rem',
+				fontWeight: 500,
+			}}
+		>
+			{children}
+		</h3>
+	);
+}
+
+export default function Segment({ title, content, imageURL, infoURL }) {
 	return (
 		<div className='segment'>
-			<h3 className='segment-title'>{title}</h3>
+			<SegmentHeader>{title}</SegmentHeader>
 			<img src={imageURL} alt={title} />
-			<p className='segment-body'>{content}</p>
-			<Link to={infoURL} className='blue-button'>
-				MORE INFO
-			</Link>
+			<p className='strong-paragraph'>{content}</p>
+
+			<BlueButtonLink href={infoURL}>MORE INFO</BlueButtonLink>
 		</div>
 	);
 }

@@ -17,13 +17,11 @@ export default function Footer() {
 				alt='Footer Banner'
 			/>
 			<div className='footer-container'>
-				{footer.columns.map((col, index) => {
-					return (
-						<div className='footer-col' key={index}>
-							<BlockContent blocks={col.content} />
-						</div>
-					);
-				})}
+				{footer.columns.map((col, index) => (
+					<div className='footer-col' key={index}>
+						<BlockContent blocks={col.content} />
+					</div>
+				))}
 			</div>
 		</section>
 	);

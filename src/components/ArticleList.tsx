@@ -3,6 +3,7 @@ import ArticleRow from './ArticleRow';
 import sanity from '../sanity';
 import '../css/article.css';
 import BlueButton from './BlueButton';
+import Centered from './Centered';
 
 export default function ArticleList() {
 	let [articles, setArticles] = React.useState<SGA.ArticleDocument[]>([]);
@@ -64,7 +65,7 @@ export default function ArticleList() {
 	return (
 		<div>
 			{articleList}
-			<div className='text-center'>{bottomComponent}</div>
+			<Centered>{bottomComponent}</Centered>
 		</div>
 	);
 }

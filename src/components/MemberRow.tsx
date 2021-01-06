@@ -1,21 +1,20 @@
 import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
+import RowItemHeader from './RowItemHeader';
 
 export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
-	let thumbUrl: string | null = null;
+	let thumbnail: React.ReactElement | null = null;
 	if (member.profile_photo) {
-		thumbUrl = imageUrl(member.profile_photo).url();
+		thumbnail = (
+			<img src={imageUrl(member.profile_photo).url()} alt={member.name} />
+		);
 	}
 
 	return (
 		<div className='d-flex my-4'>
-			<div className='article-row-thumbnail'>
-				{thumbUrl ? (
-					<img className='mb-4' src={thumbUrl} alt={member.name} />
-				) : null}
-			</div>
+			<div className='article-row-thumbnail'>{thumbnail}</div>
 			<div className='article-row-content'>
-				<h3>{member.name}</h3>
+				<RowItemHeader>{member.name}</RowItemHeader>
 				<i>
 					{member.role}, {member.year}
 				</i>
