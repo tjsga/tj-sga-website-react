@@ -7,7 +7,7 @@ const feedbackFormURL =
 export default function FeedbackPage() {
 	return (
 		<>
-			<Hero />
+			<Hero heading='Feedback' />
 			<main className='text-center'>
 				<iframe
 					src={feedbackFormURL}
