@@ -2,6 +2,35 @@ import React from 'react';
 import Hero from '../components/Hero';
 import useMission from '../hooks/useMission';
 import '../css/mission.css';
+import BlueButtonLink from '../components/BlueButtonLink';
+import Centered from '../components/Centered';
+
+function MissionQuote({ text, author }) {
+	return (
+		<div className='mission-quote'>
+			<span className='mission-quote-text'>“{text}”</span>
+			<br />
+			<br />
+			<span className='mission-quote-author'>— {author}</span>
+		</div>
+	);
+}
+
+function MissionParagraph({ title, body }: { title: string; body: string }) {
+	return (
+		<div className='d-flex'>
+			<div className='flex-1 p-2'>
+				<span className='mission-header'>{title}</span>
+			</div>
+			<div className='flex-2 p-2'>
+				<p className='mission-para'>{body}</p>
+			</div>
+		</div>
+	);
+}
+
+const previousLeadershipLink =
+	'https://docs.google.com/spreadsheets/d/1a3RYdqrDi1IPG9BKWQ2xhoX3YCPQKUl_FsRLvIVEMPg/edit?usp=drive_open&ouid=0';
 
 export default function Mission() {
 	let mission = useMission();
@@ -11,38 +40,19 @@ export default function Mission() {
 			<Hero heading='Mission and History' />
 			{mission ? (
 				<main>
-					<div className='mission-quote'>
-						<span className='mission-quote-text'>“{mission.quote_text}”</span>
-						<br />
-						<br />
-						<span className='mission-quote-author'>
-							— {mission.quote_author}
-						</span>
-					</div>
-					<div className='d-flex'>
-						<div className='flex-1 p-2'>
-							<span className='mission-header'>Vision</span>
-						</div>
-						<div className='flex-2 p-2'>
-							<p className='mission-para'>{mission.vision}</p>
-						</div>
-					</div>
-					<div className='d-flex'>
-						<div className='flex-1 p-2'>
-							<span className='mission-header'>Mission</span>
-						</div>
-						<div className='flex-2 p-2'>
-							<p className='mission-para'>{mission.mission}</p>
-						</div>
-					</div>
-					<div className='text-center'>
-						<a
-							href='https://docs.google.com/spreadsheets/d/1a3RYdqrDi1IPG9BKWQ2xhoX3YCPQKUl_FsRLvIVEMPg/edit?usp=drive_open&ouid=0'
-							className='blue-button'
-						>
+					<MissionQuote
+						author={mission.quote_author}
+						text={mission.quote_text}
+					/>
+
+					<MissionParagraph title='Vision' body={mission.vision} />
+					<MissionParagraph title='Mission' body={mission.mission} />
+
+					<Centered>
+						<BlueButtonLink href={previousLeadershipLink}>
 							Previous Leadership
-						</a>
-					</div>
+						</BlueButtonLink>
+					</Centered>
 				</main>
 			) : null}
 		</>

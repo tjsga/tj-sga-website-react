@@ -2,6 +2,7 @@ import React from 'react';
 import ArticleRow from './ArticleRow';
 import sanity from '../sanity';
 import '../css/article.css';
+import BlueButton from './BlueButton';
 
 export default function ArticleList() {
 	let [articles, setArticles] = React.useState<SGA.ArticleDocument[]>([]);
@@ -40,27 +41,30 @@ export default function ArticleList() {
 		return null;
 	}
 
+	let bottomComponent: any;
+	if (reachedEnd) {
+		bottomComponent = <div>No more articles to show</div>;
+	} else {
+		bottomComponent = (
+			<BlueButton
+				onClick={() => {
+					let { publish_date, title } = articles[articles.length - 1];
+					addArticles(publish_date, title);
+				}}
+			>
+				Load more articles
+			</BlueButton>
+		);
+	}
+
+	const articleList = articles.map((article) => (
+		<ArticleRow key={article._id} article={article} />
+	));
+
 	return (
 		<div>
-			{articles.map((article) => {
-				return <ArticleRow key={article._id} article={article} />;
-			})}
-
-			<div className='text-center'>
-				{!reachedEnd ? (
-					<button
-						className='blue-button'
-						onClick={() => {
-							let lastArticle = articles[articles.length - 1];
-							addArticles(lastArticle.publish_date, lastArticle.title);
-						}}
-					>
-						Load more articles
-					</button>
-				) : (
-					<div>No more articles to show</div>
-				)}
-			</div>
+			{articleList}
+			<div className='text-center'>{bottomComponent}</div>
 		</div>
 	);
 }

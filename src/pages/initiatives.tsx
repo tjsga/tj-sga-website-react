@@ -4,19 +4,17 @@ import InitiativeRow from '../components/InitiativeRow';
 import useQuery from '../hooks/useQuery';
 
 export default function Initiatives() {
-	let initiatives = useQuery<SGA.InitiativeDocument[]>(
-		'*[_type == "initiative"]'
-	);
+	let initiatives =
+		useQuery<SGA.InitiativeDocument[]>('*[_type == "initiative"]') ?? [];
 
 	return (
 		<>
 			<Hero heading='Initiatives' />
 			<main>
 				<div style={{ display: 'flex', flexDirection: 'column' }}>
-					{initiatives &&
-						initiatives.map((initiative) => {
-							return <InitiativeRow initiative={initiative} />;
-						})}
+					{initiatives.map((initiative) => (
+						<InitiativeRow initiative={initiative} />
+					))}
 				</div>
 			</main>
 		</>

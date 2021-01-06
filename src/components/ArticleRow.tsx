@@ -1,5 +1,5 @@
 import React from 'react';
-import imageUrl from '../imageUrl';
+import imageUrl from '../lib/imageUrl';
 import { Link } from 'react-router-dom';
 import '../css/article.css';
 

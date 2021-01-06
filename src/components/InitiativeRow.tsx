@@ -1,5 +1,4 @@
-import React from 'react';
-import imageUrl from '../imageUrl';
+import imageUrl from '../lib/imageUrl';
 import BlockContent from '@sanity/block-content-to-react';
 import '../css/article.css';
 

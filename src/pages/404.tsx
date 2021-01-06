@@ -1,8 +1,11 @@
+import Centered from '../components/Centered';
+import PrimaryHeader from '../components/PrimaryHeader';
+
 export default function NotFoundPage() {
 	return (
-		<div style={{ textAlign: 'center' }}>
-			<h1>404: Not Found</h1>
+		<Centered>
+			<PrimaryHeader>404: Not Found</PrimaryHeader>
 			<p>This page wasn't found...</p>
-		</div>
+		</Centered>
 	);
 }

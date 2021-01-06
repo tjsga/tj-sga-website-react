@@ -4,18 +4,18 @@ import MemberRow from '../components/MemberRow';
 import useQuery from '../hooks/useQuery';
 
 export default function ClassCouncil() {
-	let members = useQuery<SGA.MemberDocument[]>(
-		`*[_type == 'member' && role == 'class'] | order (year desc)`
-	);
+	let members =
+		useQuery<SGA.MemberDocument[]>(
+			`*[_type == 'member' && role == 'class'] | order (year desc)`
+		) ?? [];
 
 	return (
 		<>
 			<Hero heading='Class Council' />
 			<main>
-				{members &&
-					members.map((member) => {
-						return <MemberRow key={member._id} member={member}></MemberRow>;
-					})}
+				{members.map((member) => (
+					<MemberRow key={member._id} member={member}></MemberRow>
+				))}
 			</main>
 		</>
 	);

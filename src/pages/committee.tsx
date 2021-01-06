@@ -4,9 +4,10 @@ import MemberRow from '../components/MemberRow';
 import useQuery from '../hooks/useQuery';
 
 export default function Committee() {
-	let excomm = useQuery<SGA.MemberDocument[]>(
-		`*[_type == 'member' && committee == 'excomm'] | order (role, year desc)`
-	);
+	let excomm =
+		useQuery<SGA.MemberDocument[]>(
+			`*[_type == 'member' && committee == 'excomm'] | order (role, year desc)`
+		) ?? [];
 	// year desc because seniority 8)
 
 	return (
@@ -16,12 +17,9 @@ export default function Committee() {
 				imageURL='/images/who-we-are/excomm.png'
 			/>
 			<main>
-				<div>
-					{excomm &&
-						excomm.map((member) => {
-							return <MemberRow key={member._id} member={member} />;
-						})}
-				</div>
+				{excomm.map((member) => (
+					<MemberRow key={member._id} member={member} />
+				))}
 			</main>
 		</>
 	);

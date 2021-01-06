@@ -1,4 +1,4 @@
-import imageUrl from '../imageUrl';
+import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
 
 export default function MemberRow({ member }: { member: SGA.MemberDocument }) {

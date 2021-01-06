@@ -1,5 +1,5 @@
 import BlockContent from '@sanity/block-content-to-react';
-import imageUrl from '../imageUrl';
+import imageUrl from '../lib/imageUrl';
 import '../css/initiative.css';
 
 export default function InitiativeColumn({ name, thumbnail, content }) {

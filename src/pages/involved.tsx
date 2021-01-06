@@ -1,25 +1,28 @@
 import { SanityDocument } from '@sanity/client';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import BlueButtonLink from '../components/BlueButtonLink';
 import GetInvolvedRow from '../components/GetInvolvedRow';
 import Hero from '../components/Hero';
+import ParagraphHeader from '../components/ParagraphHeader';
 import '../css/get-involved.css';
 import sanity from '../sanity';
 
 export default function GetInvolved() {
-	let [ways, setWays] = React.useState<
+	let [getInvolved, setGetInvolved] = React.useState<
 		SanityDocument<SGA.GetInvolvedDocument> | undefined
 	>();
 
 	React.useEffect(() => {
-		sanity.getDocument<SGA.GetInvolvedDocument>('get_involved').then(setWays);
+		sanity
+			.getDocument<SGA.GetInvolvedDocument>('get_involved')
+			.then(setGetInvolved);
 	}, []);
 
 	return (
 		<>
 			<Hero heading='Get Involved' />
 			<main className='text-center'>
-				<h2 className='my-2'>SGA Calendar</h2>
+				<ParagraphHeader>SGA Calendar</ParagraphHeader>
 				<iframe
 					src='https://calendar.google.com/calendar/u/0/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k@group.calendar.google.com&ctz=America/New_York'
 					title='SGA Calendar'
@@ -32,19 +35,17 @@ export default function GetInvolved() {
 					idea or concern or get to know your representatives, reach out to us
 					at <b>sga@tjhsst.edu</b>!
 				</p>
-				{ways ? (
-					<>
-						<h2 style={{ marginTop: '4rem', marginBottom: '1.5rem' }}>
-							Here are some ways to connect with SGA:
-						</h2>
-						{ways.ways.map((way) => (
+				<ParagraphHeader>
+					Here are some ways to connect with SGA:
+				</ParagraphHeader>
+
+				{getInvolved
+					? getInvolved.ways.map((way) => (
 							<GetInvolvedRow way={way} key={way._id} />
-						))}
-					</>
-				) : null}
-				<Link className='blue-button' to='/feedback'>
-					Give Feedback
-				</Link>
+					  ))
+					: null}
+
+				<BlueButtonLink href='/feedback'>Give Feedback</BlueButtonLink>
 			</main>
 		</>
 	);
