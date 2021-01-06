@@ -25,8 +25,8 @@ let pages = [
 				title: 'News',
 			},
 			{
-				url: '#',
-				title: 'Newsletter (In development!)',
+				url: '/newsletter',
+				title: 'Newsletter',
 			},
 		],
 	},

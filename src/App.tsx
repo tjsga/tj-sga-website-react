@@ -1,19 +1,22 @@
-import React, { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
 
 import './App.css';
 
-const index = React.lazy(() => import('./pages/index'));
-const initiatives = React.lazy(() => import('./pages/initiatives'));
-const involved = React.lazy(() => import('./pages/involved'));
-const mission = React.lazy(() => import('./pages/mission'));
-const news = React.lazy(() => import('./pages/news'));
-const newsarticle = React.lazy(() => import('./pages/newsarticle'));
-const notfound = React.lazy(() => import('./pages/404'));
-const officers = React.lazy(() => import('./pages/officers'));
-const committee = React.lazy(() => import('./pages/committee'));
-const classcouncil = React.lazy(() => import('./pages/classcouncil'));
+const classcouncil = lazy(() => import('./pages/classcouncil'));
+const committee = lazy(() => import('./pages/committee'));
+const feedback = lazy(() => import('./pages/feedback'));
+const index = lazy(() => import('./pages/index'));
+const initiatives = lazy(() => import('./pages/initiatives'));
+const involved = lazy(() => import('./pages/involved'));
+const mission = lazy(() => import('./pages/mission'));
+const news = lazy(() => import('./pages/news'));
+const newsarticle = lazy(() => import('./pages/newsarticle'));
+const newsletter = lazy(() => import('./pages/newsletter'));
+const notfound = lazy(() => import('./pages/404'));
+const officers = lazy(() => import('./pages/officers'));
+
 const loading = (
 	<div
 		style={{
@@ -27,7 +30,6 @@ const loading = (
 		<h3 style={{ textAlign: 'center', width: '100vw' }}>Loading...</h3>
 	</div>
 );
-const feedback = React.lazy(() => import('./pages/feedback'));
 
 export default function App() {
 	return (
@@ -38,6 +40,7 @@ export default function App() {
 						<Route path='/initiatives' exact component={initiatives} />
 						<Route path='/involved' exact component={involved} />
 						<Route path='/news/:articleId' component={newsarticle} />
+						<Route path='/newsletter' exact component={newsletter} />
 						<Route path='/news' exact component={news} />
 						<Route path='/mission' exact component={mission} />
 						<Route path='/officers' exact component={officers} />
