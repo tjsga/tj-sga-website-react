@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/footer.css';
 import BlockContent from '@sanity/block-content-to-react';
 import useFooter from '../hooks/useFooter';
+import Centered from './Centered';
 
 export default function Footer() {
 	let footer = useFooter();
@@ -20,6 +21,11 @@ export default function Footer() {
 				{footer.columns.map((col, index) => (
 					<div className='footer-col' key={index}>
 						<BlockContent blocks={col.content} />
+						{index === 2 ? (
+							<Centered>
+								<img src='/images/banner.png' alt='TJHSST' height='80px'></img>
+							</Centered>
+						) : null}
 					</div>
 				))}
 			</div>
