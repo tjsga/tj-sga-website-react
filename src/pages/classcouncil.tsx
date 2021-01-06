@@ -42,8 +42,6 @@ export default function ClassCouncil() {
 		currentYearMembers.push(member);
 	}
 
-	console.log(years);
-
 	return (
 		<>
 			<Hero heading='Class Council' />
