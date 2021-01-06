@@ -2,7 +2,13 @@ import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
 import RowItemHeader from './RowItemHeader';
 
-export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
+export default function MemberRow({
+	member,
+	limitPhotoHeight = false,
+}: {
+	member: SGA.MemberDocument;
+	limitPhotoHeight?: boolean;
+}) {
 	let thumbnail: React.ReactElement | null = null;
 	if (member.profile_photo) {
 		thumbnail = (
@@ -12,7 +18,15 @@ export default function MemberRow({ member }: { member: SGA.MemberDocument }) {
 
 	return (
 		<div className='d-flex my-4'>
-			<div className='article-row-thumbnail'>{thumbnail}</div>
+			<div
+				className={
+					limitPhotoHeight
+						? 'article-row-thumbnail-height-constrained'
+						: 'article-row-thumbnail'
+				}
+			>
+				{thumbnail}
+			</div>
 			<div className='article-row-content'>
 				<RowItemHeader>{member.name}</RowItemHeader>
 				<i>

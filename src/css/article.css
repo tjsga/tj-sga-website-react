@@ -3,11 +3,17 @@
   flex-direction: column;
 }
 
-.article-row-thumbnail {
+.article-row-thumbnail,
+.article-row-thumbnail-height-constrained {
   flex: 1;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   padding-right: 1em;
+  text-align: center;
+}
+
+.article-row-thumbnail-height-constrained>img {
+  max-height: 200px;
 }
 
 .article-row-content {

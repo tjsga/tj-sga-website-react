@@ -18,7 +18,7 @@ export default function Committee() {
 			/>
 			<main>
 				{excomm.map((member) => (
-					<MemberRow key={member._id} member={member} />
+					<MemberRow limitPhotoHeight key={member._id} member={member} />
 				))}
 			</main>
 		</>

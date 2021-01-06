@@ -50,7 +50,11 @@ export default function ClassCouncil() {
 					<>
 						<PrimaryHeader>Class Council {year}</PrimaryHeader>
 						{members.map((member) => (
-							<MemberRow key={member._id} member={member}></MemberRow>
+							<MemberRow
+								limitPhotoHeight
+								key={member._id}
+								member={member}
+							></MemberRow>
 						))}
 					</>
 				))}
