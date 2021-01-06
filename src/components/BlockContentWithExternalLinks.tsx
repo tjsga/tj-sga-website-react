@@ -17,7 +17,7 @@ export default function BlockContentWithExternalLinks({
 				}
 			}}
 		>
-			<BlockContent blocks={blocks} />
+			<BlockContent blocks={blocks} projectId='yi263kzm' dataset='production' />
 		</div>
 	);
 }
