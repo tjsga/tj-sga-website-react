@@ -35,6 +35,7 @@ export default function Mission() {
 
 					<ParagraphWithHeader title='Vision' body={mission.vision} />
 					<ParagraphWithHeader title='Mission' body={mission.mission} />
+					<ParagraphWithHeader title='Inspiration' body={mission.inspiration} />
 
 					<Centered>
 						<BlueButtonLink href={previousLeadershipLink}>

@@ -26,11 +26,19 @@ declare namespace SGA {
 		bio: string;
 	}
 
+	interface MissionDocument {
+		mission: string;
+		vision: string;
+		inspiration: string;
+		quote_text: string;
+		quote_author: string;
+	}
+
 	interface GetInvolvedWay {
 		_id: string;
 		title: string;
 		text: string;
-	};
+	}
 
 	interface GetInvolvedDocument {
 		ways: GetInvolvedWay[];
