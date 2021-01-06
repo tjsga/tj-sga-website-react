@@ -15,7 +15,7 @@ export default function BlueButtonLink({
 		);
 	} else {
 		return (
-			<a href={href} className='blue-button'>
+			<a href={href} target='_blank' rel='noreferrer' className='blue-button'>
 				{children}
 			</a>
 		);
