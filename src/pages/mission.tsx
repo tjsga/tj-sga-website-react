@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import useMission from '../hooks/useMission';
-import '../css/mission.css';
 import BlueButtonLink from '../components/BlueButtonLink';
 import Centered from '../components/Centered';
+import Hero from '../components/Hero';
 import ParagraphWithHeader from '../components/ParagraphWithHeader';
+import '../css/mission.css';
+import useMission from '../hooks/useMission';
 import { SGA_PREVIOUS_LEADERSHIP_URL } from '../lib/constants';
 
 function MissionQuote({ text, author }) {

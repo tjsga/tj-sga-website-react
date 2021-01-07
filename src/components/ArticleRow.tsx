@@ -1,6 +1,6 @@
 import React from 'react';
-import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
+import imageUrl from '../lib/imageUrl';
 import ClickableLink from './ClickableLink';
 import FlexRow from './FlexRow';
 import FlexRowSection from './FlexRowSection';

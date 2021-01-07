@@ -1,7 +1,7 @@
-import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
-import RowItemHeader from './RowItemHeader';
+import imageUrl from '../lib/imageUrl';
 import ConstrainedImage from './ConstrainedImage';
+import RowItemHeader from './RowItemHeader';
 import RowItemSubheader from './RowItemSubheader';
 
 export default function MemberRow({

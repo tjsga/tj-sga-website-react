@@ -1,7 +1,7 @@
 import React from 'react';
-import ArticleRow from './ArticleRow';
-import sanity from '../sanity';
 import '../css/article.css';
+import sanity from '../sanity';
+import ArticleRow from './ArticleRow';
 import BlueButton from './BlueButton';
 import Centered from './Centered';
 

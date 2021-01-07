@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import BlockContentWithExternalLinks from '../components/BlockContentWithExternalLinks';
+import ClickableLink from '../components/ClickableLink';
 import Hero from '../components/Hero';
-import imageUrl from '../lib/imageUrl';
+import PrimaryHeader from '../components/PrimaryHeader';
 import '../css/article.css';
 import useNewsArticle from '../hooks/useNewsArticle';
-import ClickableLink from '../components/ClickableLink';
-import BlockContentWithExternalLinks from '../components/BlockContentWithExternalLinks';
-import PrimaryHeader from '../components/PrimaryHeader';
+import imageUrl from '../lib/imageUrl';
 
 export default function NewsArticle() {
 	let { articleId } = useParams<{ articleId: string }>();

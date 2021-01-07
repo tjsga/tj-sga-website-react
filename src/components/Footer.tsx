@@ -1,6 +1,6 @@
+import BlockContent from '@sanity/block-content-to-react';
 import React from 'react';
 import '../css/footer.css';
-import BlockContent from '@sanity/block-content-to-react';
 import useFooter from '../hooks/useFooter';
 import Centered from './Centered';
 

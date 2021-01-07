@@ -23,14 +23,15 @@ export default function Officers() {
 	}, []);
 
 	const officersSorted = sortCommittee(officers ?? [], officerOrder);
-	const officerList = officersSorted.map((officer) => (
-		<MemberRow member={officer} />
-	));
 
 	return (
 		<>
 			<Hero heading='Officers' imageURL='/images/who-we-are/officers.jpg' />
-			<main>{officerList}</main>
+			<main>
+				{officersSorted.map((officer) => (
+					<MemberRow member={officer} />
+				))}
+			</main>
 		</>
 	);
 }

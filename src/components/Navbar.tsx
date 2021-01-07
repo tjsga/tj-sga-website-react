@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/navbar.css';
 import { Link } from 'react-router-dom';
+import '../css/navbar.css';
 
 let pages = [
 	{
