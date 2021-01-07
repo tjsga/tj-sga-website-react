@@ -24,24 +24,29 @@ export default function Mission() {
 	return (
 		<>
 			<Hero heading='Mission and History' />
-			{mission ? (
-				<main>
-					<MissionQuote
-						author={mission.quote_author}
-						text={mission.quote_text}
-					/>
+			<main>
+				{mission && (
+					<>
+						<MissionQuote
+							author={mission.quote_author}
+							text={mission.quote_text}
+						/>
 
-					<ParagraphWithHeader title='Vision' body={mission.vision} />
-					<ParagraphWithHeader title='Mission' body={mission.mission} />
-					<ParagraphWithHeader title='Inspiration' body={mission.inspiration} />
+						<ParagraphWithHeader title='Vision' body={mission.vision} />
+						<ParagraphWithHeader title='Mission' body={mission.mission} />
+						<ParagraphWithHeader
+							title='Inspiration'
+							body={mission.inspiration}
+						/>
+					</>
+				)}
 
-					<Centered>
-						<BlueButtonLink href={SGA_PREVIOUS_LEADERSHIP_URL}>
-							Previous Leadership
-						</BlueButtonLink>
-					</Centered>
-				</main>
-			) : null}
+				<Centered>
+					<BlueButtonLink href={SGA_PREVIOUS_LEADERSHIP_URL}>
+						Previous Leadership
+					</BlueButtonLink>
+				</Centered>
+			</main>
 		</>
 	);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../css/mission.css';
 import useMission from '../hooks/useMission';
+import BlueButtonLink from './BlueButtonLink';
 
 export default function Mission() {
 	let mission = useMission();
@@ -13,9 +13,7 @@ export default function Mission() {
 		<section className='text-center'>
 			<div className='mission-box'>
 				<p className='mission-landing-page-text'>“{mission.vision}”</p>
-				<Link to='/mission' className='blue-button'>
-					Our Mission
-				</Link>
+				<BlueButtonLink href='/mission'>Our Mission</BlueButtonLink>
 			</div>
 		</section>
 	);

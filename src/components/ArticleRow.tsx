@@ -1,7 +1,9 @@
-import React, { DetailedHTMLProps } from 'react';
+import React from 'react';
 import imageUrl from '../lib/imageUrl';
 import '../css/article.css';
 import ClickableLink from './ClickableLink';
+import FlexRow from './FlexRow';
+import FlexRowSection from './FlexRowSection';
 
 export default function ArticleRow({
 	article,
@@ -15,18 +17,16 @@ export default function ArticleRow({
 		);
 	}
 
-	const slug = (s: string) => {
-		return s.toLowerCase().replaceAll(' ', '-');
-	};
+	const slug = (s: string) => s.toLowerCase().replace(/ /g, '-');
+	const articleUrl = '/news/' + article._id + '/' + slug(article.title);
 
 	return (
-		<div className='d-flex my-4'>
-			<div className='article-row-thumbnail'>{thumbnail}</div>
-			<div className='article-row-content'>
-				<ClickableLink
-					href={'/news/' + article._id + '/' + slug(article.title)}
-					target='_blank'
-				>
+		<FlexRow marginTop='4em' marginBottom='4em'>
+			<FlexRowSection flex={1} paddingY='0.5em' paddingRight='1em'>
+				{thumbnail}
+			</FlexRowSection>
+			<FlexRowSection flex={3} paddingY='0.5em' paddingRight='1em'>
+				<ClickableLink href={articleUrl} target='_blank'>
 					<h3 style={{ margin: '0px' }}>{article.title}</h3>
 				</ClickableLink>
 
@@ -37,7 +37,7 @@ export default function ArticleRow({
 				<br />
 
 				<p>{article.summary}</p>
-			</div>
-		</div>
+			</FlexRowSection>
+		</FlexRow>
 	);
 }

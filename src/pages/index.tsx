@@ -6,16 +6,10 @@ import SegmentGroup from '../components/SegmentGroup';
 export default function IndexPage() {
 	return (
 		<>
-			{/* Hero image */}
 			<Hero />
-
 			<main>
-				{/* Info columns */}
 				<SegmentGroup />
-
 				<hr />
-
-				{/* Mission */}
 				<NewsAndMission />
 			</main>
 		</>

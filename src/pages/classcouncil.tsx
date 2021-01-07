@@ -24,8 +24,6 @@ export default function ClassCouncil() {
 		return null;
 	}
 
-	console.log(members);
-
 	let years: [string, SGA.MemberDocument[]][] = [];
 	let currentYearMembers: SGA.MemberDocument[] = [];
 	let currentYear = '';

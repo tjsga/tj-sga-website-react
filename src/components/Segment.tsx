@@ -15,14 +15,14 @@ function SegmentHeader({ children }: { children: React.ReactNode }) {
 	);
 }
 
-export default function Segment({ title, content, imageURL, infoURL }) {
+export default function Segment({ title, content, imageUrl, infoUrl }) {
 	return (
 		<div className='segment'>
 			<SegmentHeader>{title}</SegmentHeader>
-			<img src={imageURL} alt={title} />
+			<img src={imageUrl} alt={title} />
 			<p className='strong-paragraph'>{content}</p>
 
-			<BlueButtonLink href={infoURL}>MORE INFO</BlueButtonLink>
+			<BlueButtonLink href={infoUrl}>MORE INFO</BlueButtonLink>
 		</div>
 	);
 }
