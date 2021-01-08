@@ -31,7 +31,9 @@ export default function MemberRow({
 							}}
 						/>
 					) : (
-						<img src={thumbnail} alt={member.name} />
+						<div style={{ marginLeft: 'auto', marginRight: '2em' }}>
+							<img src={thumbnail} alt={member.name} />
+						</div>
 					)
 				) : null}
 			</div>

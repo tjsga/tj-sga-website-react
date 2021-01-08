@@ -6,9 +6,9 @@ import useQuery from '../hooks/useQuery';
 export default function Committee() {
 	let excomm =
 		useQuery<SGA.MemberDocument[]>(
-			`*[_type == 'member' && committee == 'excomm'] | order (role, year desc)`
+			`*[_type == 'member' && committee == 'excomm'] | order (role, year)`
 		) ?? [];
-	// year desc because seniority 8)
+	// year because seniority
 
 	return (
 		<>
