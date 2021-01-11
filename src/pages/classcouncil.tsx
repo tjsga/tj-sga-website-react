@@ -17,7 +17,7 @@ const roleOrder = [
 
 export default function ClassCouncil() {
 	let members = useQuery<SGA.MemberDocument[]>(
-		`*[_type == 'member' && committee == 'class'] | order (year desc)`
+		`*[_type == 'member' && committee == 'class'] | order year`
 	);
 
 	if (!members) {
@@ -28,16 +28,24 @@ export default function ClassCouncil() {
 	let currentYearMembers: SGA.MemberDocument[] = [];
 	let currentYear = '';
 
+	const saveCurrentYear = () => {
+		// Clear the members of the current year
+		years.push([currentYear, sortCommittee(currentYearMembers, roleOrder)]);
+		currentYearMembers = [];
+	};
+
 	for (let member of members) {
 		if (member.year !== currentYear) {
 			if (currentYear !== '') {
-				// Clear the members of the current year
-				years.push([currentYear, sortCommittee(currentYearMembers, roleOrder)]);
-				currentYearMembers = [];
+				saveCurrentYear();
 			}
 			currentYear = member.year;
 		}
 		currentYearMembers.push(member);
+	}
+
+	if (currentYearMembers.length > 0) {
+		saveCurrentYear();
 	}
 
 	return (
