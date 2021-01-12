@@ -7,6 +7,6 @@ const builder = ImageUrlBuilder(sanity);
  * Build a URL for an image based on specified attributes
  * @param {SanityImageSource} source The source image
  */
-export default function imageUrl(source: any): any {
+export default function imageUrl(source: any) {
 	return builder.image(source);
 }
