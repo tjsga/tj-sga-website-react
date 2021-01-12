@@ -13,7 +13,10 @@ export default function ArticleRow({
 	let thumbnail: React.ReactElement | null = null;
 	if (article.thumbnail) {
 		thumbnail = (
-			<img src={imageUrl(article.thumbnail).url()} alt={article.title} />
+			<img
+				src={imageUrl(article.thumbnail).url() ?? undefined}
+				alt={article.title}
+			/>
 		);
 	}
 

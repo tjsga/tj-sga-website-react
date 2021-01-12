@@ -14,7 +14,7 @@ export default function NewsArticle() {
 
 	let thumbnailUrl = '/images/hero.png';
 	if (article?.thumbnail) {
-		thumbnailUrl = imageUrl(article.thumbnail).url();
+		thumbnailUrl = imageUrl(article.thumbnail).url()!;
 	}
 
 	const goToAllNewsArticles = (
