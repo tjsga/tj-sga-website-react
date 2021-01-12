@@ -14,7 +14,7 @@ export default function Committee() {
 		<>
 			<Hero
 				heading='Executive Committee'
-				imageURL='/images/who-we-are/excomm.png'
+				imageURL='/images/who-we-are/excomm.jpg'
 			/>
 			<main>
 				{excomm.map((member) => (
