@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It was made to replace the [old website](https://github.com/tjsga/website-2018) to use a more modern framework (React) and a better content management system ([Sanity](https://www.sanity.io/).
+It was made to replace the [old website](https://github.com/tjsga/website-2018) to use a more modern framework (React) and a better content management system ([Sanity](https://www.sanity.io/)).
 
 This website has a page for recent news, pages for the officers and different committees, a page for SGA initiatives and how to get involved in SGA, and a page about SGA's mission and vision. Most of the content itself is hosted outside of the repository on Sanity, because we hope to note have to change the website very often.
 
