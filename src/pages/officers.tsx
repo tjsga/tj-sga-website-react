@@ -6,7 +6,7 @@ import sanity from '../sanity';
 
 const officerOrder = [
 	'SGA President',
-	'SGA Vice-President',
+	'SGA Vice President',
 	'SGA Treasurer',
 	'SGA Secretary',
 ];
