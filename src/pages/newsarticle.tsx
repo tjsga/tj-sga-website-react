@@ -10,7 +10,7 @@ import imageUrl from '../lib/imageUrl';
 
 export default function NewsArticle() {
 	let { articleId } = useParams<{ articleId: string }>();
-	let article = useNewsArticle(articleId);
+	let article = useNewsArticle(articleId || '');
 
 	let thumbnailUrl = '/images/hero.png';
 	if (article?.thumbnail) {

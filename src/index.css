@@ -33,3 +33,53 @@ h3 {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+
+
+
+
+
+/* scrollbar fun */
+
+/* if no like... */
+/* comment out from here... */
+/* ::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150,150,150,0.45); 
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150,150,150,0.85); 
+}
+
+::-webkit-scrollbar-button:single-button {
+  background-color: #fff;
+  display: block;
+  border-style: solid;
+  height: 1rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0.25rem 0.5rem 0.5rem 0.5rem;
+  border-color: transparent transparent rgba(150,150,150,0.85) transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent rgba(100,100,100,1) transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 0.5rem 0.5rem 0.25rem 0.5rem;
+  border-color: rgba(150,150,150,0.85) transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: rgba(100,100,100,1) transparent transparent transparent;
+} */
+/* ...to here */

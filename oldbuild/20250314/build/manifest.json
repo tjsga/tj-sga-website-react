@@ -1,0 +1,10 @@
+{
+  "short_name": "TJ Student Government Association",
+  "name": "Thomas Jefferson Student Government Association",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,21 +1,21 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 
 import './App.css';
 
-const classcouncil = lazy(() => import('./pages/classcouncil'));
-const committee = lazy(() => import('./pages/committee'));
-const feedback = lazy(() => import('./pages/feedback'));
-const index = lazy(() => import('./pages/index'));
-const initiatives = lazy(() => import('./pages/initiatives'));
-const involved = lazy(() => import('./pages/involved'));
-const mission = lazy(() => import('./pages/mission'));
-const news = lazy(() => import('./pages/news'));
-const newsarticle = lazy(() => import('./pages/newsarticle'));
-const newsletter = lazy(() => import('./pages/newsletter'));
-const notfound = lazy(() => import('./pages/404'));
-const officers = lazy(() => import('./pages/officers'));
+const ClassCouncil = lazy(() => import('./pages/classcouncil'));
+const Committee = lazy(() => import('./pages/committee'));
+const Feedback = lazy(() => import('./pages/feedback'));
+const Index = lazy(() => import('./pages/index'));
+const Initiatives = lazy(() => import('./pages/initiatives'));
+const Involved = lazy(() => import('./pages/involved'));
+const Mission = lazy(() => import('./pages/mission'));
+const News = lazy(() => import('./pages/news'));
+const NewsArticle = lazy(() => import('./pages/newsarticle'));
+const Newsletter = lazy(() => import('./pages/newsletter'));
+const NotFound = lazy(() => import('./pages/404'));
+const Officers = lazy(() => import('./pages/officers'));
 
 const loading = (
 	<div
@@ -36,20 +36,20 @@ export default function App() {
 		<Suspense fallback={loading}>
 			<BrowserRouter>
 				<Layout>
-					<Switch>
-						<Route path='/initiatives' exact component={initiatives} />
-						<Route path='/involved' exact component={involved} />
-						<Route path='/news/:articleId' component={newsarticle} />
-						<Route path='/newsletter' exact component={newsletter} />
-						<Route path='/news' exact component={news} />
-						<Route path='/mission' exact component={mission} />
-						<Route path='/officers' exact component={officers} />
-						<Route path='/committee' exact component={committee} />
-						<Route path='/class-council' exact component={classcouncil} />
-						<Route path='/feedback' exact component={feedback} />
-						<Route path='/:path' component={notfound} />
-						<Route path='/' exact component={index} />
-					</Switch>
+					<Routes>
+						<Route path='/initiatives' element={<Initiatives />} />
+						<Route path='/involved' element={<Involved />} />
+						<Route path='/news/:articleId' element={<NewsArticle />} />
+						<Route path='/newsletter' element={<Newsletter />} />
+						<Route path='/news' element={<News />} />
+						<Route path='/mission' element={<Mission />} />
+						<Route path='/officers' element={<Officers />} />
+						<Route path='/committee' element={<Committee />} />
+						<Route path='/class-council' element={<ClassCouncil />} />
+						<Route path='/feedback' element={<Feedback />} />
+						<Route path='/:path' element={<NotFound />} />
+						<Route path='/' element={<Index />} />
+					</Routes>
 				</Layout>
 			</BrowserRouter>
 		</Suspense>
