@@ -21,7 +21,7 @@ export default function ArticleRow({
 	}
 
 	const slug = (s: string) => s.toLowerCase().replace(/ /g, '-');
-	const articleUrl = '/news/' + article._id + '/' + slug(article.title);
+	const articleUrl = '/news/' + article._id;// + '/' + slug(article.title);
 
 	return (
 		<FlexRow marginTop='4em' marginBottom='4em'>
