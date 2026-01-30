@@ -9,7 +9,7 @@ export default function Newsletter() {
 			<Hero heading='Newsletter' />
 			<main>
 				<Centered>
-					<PrimaryHeader>SGA Newsletter</PrimaryHeader>
+					<PrimaryHeader>SGA Newsletter!</PrimaryHeader>
 					<iframe
 						title='SGA Newsletter'
 						src={SGA_NEWSLETTER_EMBED_URL}
