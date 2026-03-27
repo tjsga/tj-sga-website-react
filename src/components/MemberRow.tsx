@@ -40,7 +40,7 @@ export default function MemberRow({
 			<div style={{ flex: 3 }}>
 				<RowItemHeader>{member.name}</RowItemHeader>
 				<RowItemSubheader>
-					{member.role}, {member.year}
+					{member.role} ({member.year})
 				</RowItemSubheader>
 				<br />
 				<p>{member.bio}</p>

@@ -13,7 +13,6 @@ const Involved = lazy(() => import('./pages/involved'));
 const Mission = lazy(() => import('./pages/mission'));
 const News = lazy(() => import('./pages/news'));
 const NewsArticle = lazy(() => import('./pages/newsarticle'));
-const Newsletter = lazy(() => import('./pages/newsletter'));
 const NotFound = lazy(() => import('./pages/404'));
 const Officers = lazy(() => import('./pages/officers'));
 
@@ -40,7 +39,6 @@ export default function App() {
 						<Route path='/initiatives' element={<Initiatives />} />
 						<Route path='/involved' element={<Involved />} />
 						<Route path='/news/:articleId' element={<NewsArticle />} />
-						<Route path='/newsletter' element={<Newsletter />} />
 						<Route path='/news' element={<News />} />
 						<Route path='/mission' element={<Mission />} />
 						<Route path='/officers' element={<Officers />} />
