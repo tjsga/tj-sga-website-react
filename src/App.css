@@ -66,3 +66,61 @@ a.blue-button {
   display: block;
   padding-right: 2em;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.d-flex.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .space-2 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .space-4 {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .strong-paragraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .paragraph-with-header-header {
+    text-align: left;
+    padding-right: 0;
+    font-size: 1.25rem;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .d-flex > div {
+    text-align: center !important;
+  }
+
+  .d-flex > div img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
