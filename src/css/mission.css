@@ -1,13 +1,27 @@
 .mission-box {
-  padding: 0px 20px;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--surface), rgba(255, 255, 255, 0.5));
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  margin-top: 2rem;
+  transition: var(--transition);
+}
+
+.mission-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .mission-landing-page-text {
-  font-family: 'Arapey';
-  font-size: 33px;
+  font-family: 'Arapey', serif;
+  font-size: 2.25rem;
   font-style: italic;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 1.4;
+  color: var(--secondary);
+  margin-bottom: 2rem;
 }
 
 .mission-quote {

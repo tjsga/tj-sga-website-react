@@ -8,17 +8,8 @@ export default function Hero({
 	heading?: string;
 }) {
 	return (
-		<div className='hero'>
+		<div className='hero' style={{ backgroundImage: `url(${imageURL})` }}>
 			<span className='hero-heading'>{heading}</span>
-			<img
-				src={imageURL}
-				alt='Background'
-				style={{
-					width: '100vw',
-					maxHeight: '60vh',
-					objectFit: 'contain',
-				}}
-			/>
 		</div>
 	);
 }

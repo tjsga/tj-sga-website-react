@@ -1,29 +1,69 @@
 .hero {
   position: relative;
   width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.3) 0%,
+    rgba(15, 23, 42, 0.7) 100%
+  );
+  z-index: 1;
 }
 
 .hero-heading {
-  display: flex;
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 1px 1px rgba(48, 48, 48, 0.5);
+  position: relative;
+  z-index: 2;
+  font-family: 'Outfit', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
   color: white;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 0 1rem;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 300px;
+  }
   .hero-heading {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-heading {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
 }
