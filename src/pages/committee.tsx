@@ -4,20 +4,23 @@ import MemberRow from '../components/MemberRow';
 import useQuery from '../hooks/useQuery';
 
 const COMMITTEES = [
-  { key: 'activities',     label: 'Activities',     role: 'Activities Specialist' },
-  { key: 'communications', label: 'Communications', role: 'Communications Specialist' },
-  { key: 'policy',         label: 'Policy',         role: 'Policy Specialist' },
-  { key: 'tech',           label: 'Tech',           role: 'Technology Specialist' },
+  { key: 'activities',     label: 'Activities',     roles: ['Activities Director', 'Activities Specialist'] },
+  { key: 'communications', label: 'Communications', roles: ['Communications Director', 'Communications Specialist'] },
+  { key: 'policy',         label: 'Policy',         roles: ['Policy Director', 'Policy Specialist'] },
+  { key: 'tech',           label: 'Tech',           roles: ['Technology Director', 'Technology Specialist'] },
 ] as const;
 
 type CommitteeKey = typeof COMMITTEES[number]['key'];
 
-function CommitteeSection({ role, label }: { role: string; label: string }) {
+function CommitteeSection({ roles, label }: { roles: readonly string[]; label: string }) {
   const [open, setOpen] = useState(false);
+
+  // Format array into Sanity GROQ list syntax: ['Role 1', 'Role 2']
+  const formattedRoles = `[${roles.map((r) => `'${r}'`).join(', ')}]`;
 
   const members =
     useQuery<SGA.MemberDocument[]>(
-      `*[_type == 'member' && role == '${role}'] | order(year)`
+      `*[_type == 'member' && role in ${formattedRoles}] | order(role, year)`
     ) ?? [];
 
   return (
@@ -98,8 +101,8 @@ export default function Committee() {
             borderTop: '1px solid #e5e5e5',
           }}
         >
-          {COMMITTEES.map(({ key, label, role }) => (
-            <CommitteeSection key={key} role={role} label={label} />
+          {COMMITTEES.map(({ key, label, roles }) => (
+            <CommitteeSection key={key} roles={roles} label={label} />
           ))}
         </div>
       </main>

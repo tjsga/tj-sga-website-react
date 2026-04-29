@@ -10,9 +10,10 @@ export default function FeedbackPage() {
 				<iframe
 					src={SGA_FEEDBACK_FORM_URL}
 					style={{
-						width: '640px',
-						height: '900px',
-						scrollbarWidth: 'none',
+						width: '100%',
+						maxWidth: '800px',
+						height: '1000px',
+						border: 'none',
 					}}
 					title='Feedback Form'
 				>

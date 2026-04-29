@@ -33,3 +33,14 @@
   line-height: 33px;
   font-weight: 400;
 }
+
+@media (max-width: 768px) {
+  .article-row-content {
+    padding-right: 0.5em;
+  }
+
+  .article-paragraphs {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
