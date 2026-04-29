@@ -10,6 +10,8 @@ export default function InitiativeRow({
 	let thumbUrl: string | null = null;
 	if (initiative.thumbnail) {
 		thumbUrl = imageUrl(initiative.thumbnail).url();
+	} else if (initiative.name === 'Open Forum') {
+		thumbUrl = '/images/segments/open-forum.png';
 	}
 
 	return (
