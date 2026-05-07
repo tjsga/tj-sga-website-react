@@ -11,4 +11,8 @@ try:
     for p, count in c.most_common(10):
         print(f"#{p[0]:02x}{p[1]:02x}{p[2]:02x}", count)
 except Exception as e:
+<<<<<<< HEAD
     print(e)
+=======
+    print(e)
+>>>>>>> 0368ad621a1a673c3a048e876ccf00c6ddc8d882

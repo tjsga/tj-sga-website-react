@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/navbar.css';
 
@@ -64,59 +64,76 @@ let pages = [
 ];
 
 export default function Navbar() {
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const toggleMenu = () => setMenuOpen(!menuOpen);
+	const closeMenu = () => setMenuOpen(false);
+
 	return (
 		<div className='nav'>
-			<Link to='/' key='/'>
+			<Link to='/' key='/' className='nav-logo-link'>
 				<img src='/images/banner.png' alt='TJ SGA' className='nav-logo' />
 			</Link>
-			{pages.map((page) => {
-				if ('items' in page) {
-					return (
-						<div key={page.title} className='submenu-outer'>
-							<Link className='nav-link' to={page.url}>
-								{page.title}
-							</Link>
-							<div className='submenu-content'>
-								{/* Most of these are external so we use <a> tags instead of <Link> */}
-								{page.items?.map((item) => {
-									let isExternal = /https?:\/\//.test(item.url);
-									if (isExternal) {
-										// Treat external links differently; add 'target=_blank' so they
-										// open in a new window
+
+			<button className='nav-hamburger' onClick={toggleMenu} aria-label='Toggle menu'>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div className={`nav-overlay ${menuOpen ? 'open' : ''}`} onClick={closeMenu}></div>
+
+			<div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+				{pages.map((page) => {
+					if ('items' in page) {
+						return (
+							<div key={page.title} className='submenu-outer'>
+								<Link className='nav-link' to={page.url}>
+									{page.title}
+								</Link>
+								<div className='submenu-content'>
+									{/* Most of these are external so we use <a> tags instead of <Link> */}
+									{page.items?.map((item) => {
+										let isExternal = /https?:\/\//.test(item.url);
+										if (isExternal) {
+											// Treat external links differently; add 'target=_blank' so they
+											// open in a new window
+											return (
+												<div key={item.title}>
+													<a
+														className='submenu-link'
+														href={item.url}
+														target='_blank'
+														rel='noreferrer'
+														onClick={closeMenu}
+													>
+														{item.title}
+													</a>
+													<br />
+												</div>
+											);
+										}
 										return (
 											<div key={item.title}>
-												<a
-													className='submenu-link'
-													href={item.url}
-													target='_blank'
-													rel='noreferrer'
-												>
+												<Link className='submenu-link' to={item.url} onClick={closeMenu}>
 													{item.title}
-												</a>
+												</Link>
 												<br />
 											</div>
 										);
-									}
-									return (
-										<div key={item.title}>
-											<Link className='submenu-link' to={item.url}>
-												{item.title}
-											</Link>
-											<br />
-										</div>
-									);
-								})}
+									})}
+								</div>
 							</div>
-						</div>
-					);
-				} else {
-					return (
-						<Link key={page.title} className='nav-link' to={page.url}>
-							{page.title}
-						</Link>
-					);
-				}
-			})}
+						);
+					} else {
+						return (
+							<Link key={page.title} className='nav-link' to={page.url} onClick={closeMenu}>
+								{page.title}
+							</Link>
+						);
+					}
+				})}
+			</div>
 		</div>
 	);
 }

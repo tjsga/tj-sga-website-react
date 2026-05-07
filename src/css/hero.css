@@ -12,16 +12,6 @@
   background-repeat: no-repeat;
 }
 
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
 .hero::after {
   content: '';
   position: absolute;
@@ -49,7 +39,6 @@
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   padding: 0 1rem;
   animation: fadeUp 0.8s ease-out forwards;
-  max-width: 90%;
 }
 
 @keyframes fadeUp {

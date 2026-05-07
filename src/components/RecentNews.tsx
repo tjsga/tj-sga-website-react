@@ -114,10 +114,10 @@ export default function RecentNews() {
                         borderRadius: '3px',
                         boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
                         margin: '1px',
-                        maxWidth: '700px',
-                        minWidth: '500px',
+                        minWidth: '280px',
                         padding: '0',
-                        width: 'calc(100% - 2px)'
+                        width: 'calc(100% - 2px)',
+                        maxWidth: '100%'
                     }}
                 >
                 </blockquote>
