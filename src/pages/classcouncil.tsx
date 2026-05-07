@@ -19,7 +19,7 @@ const roleOrder = [
 
 export interface ClassCouncilYear {
 	year: string;
-	members: SGA.MemberDocument[];
+	roles: { [role: string]: SGA.MemberDocument[] };
 	photoUrl: string | null;
 	photoDescription: string | null;
 }
@@ -40,10 +40,18 @@ export default function ClassCouncil() {
 	let currentYearPhotoDescription: string | null = null;
 
 	const saveCurrentYear = () => {
+		// Group members by role
+		let roles: { [role: string]: SGA.MemberDocument[] } = {};
+		for (let member of sortCommittee(currentYearMembers, roleOrder)) {
+			if (!roles[member.role]) {
+				roles[member.role] = [];
+			}
+			roles[member.role].push(member);
+		}
 		// Clear the members of the current year
 		years.push({
 			year: currentYear,
-			members: sortCommittee(currentYearMembers, roleOrder),
+			roles,
 			photoUrl: currentYearPhotoUrl,
 			photoDescription: currentYearPhotoDescription,
 		});
@@ -78,7 +86,7 @@ export default function ClassCouncil() {
 		<>
 			<Hero heading='Class Council' />
 			<main>
-				{years.map(({ year, members, photoUrl, photoDescription }) => (
+				{years.map(({ year, roles, photoUrl, photoDescription }) => (
 					<>
 						<PrimaryHeader style={{ textAlign: 'center' }}>
 							Class Council {year}
@@ -106,13 +114,24 @@ export default function ClassCouncil() {
 							</div>
 						)}
 
-						{members.map((member) => (
-							<MemberRow
-								limitPhotoHeight
-								key={member._id}
-								member={member}
-							></MemberRow>
-						))}
+						{Object.keys(roles).length > 0 && (
+							<details style={{ marginTop: '1em' }}>
+								<summary style={{ fontSize: '1.2em', fontWeight: 'bold', cursor: 'pointer', textAlign: 'center' }}>
+									Roles
+								</summary>
+								<div style={{ marginLeft: '1em', marginTop: '1em' }}>
+									<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1em', width: '100%' }}>
+										{Object.keys(roles).flatMap(role => roles[role]).map((member) => (
+											<MemberRow
+												limitPhotoHeight
+												key={member._id}
+												member={member}
+											/>
+										))}
+									</div>
+								</div>
+							</details>
+						)}
 					</>
 				))}
 			</main>

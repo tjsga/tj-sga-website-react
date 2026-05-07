@@ -7,6 +7,7 @@ import './App.css';
 const ClassCouncil = lazy(() => import('./pages/classcouncil'));
 const Committee = lazy(() => import('./pages/committee'));
 const Feedback = lazy(() => import('./pages/feedback'));
+const Gallery = lazy(() => import('./pages/gallery'));
 const Index = lazy(() => import('./pages/index'));
 const Initiatives = lazy(() => import('./pages/initiatives'));
 const Involved = lazy(() => import('./pages/involved'));
@@ -45,6 +46,7 @@ export default function App() {
 						<Route path='/committee' element={<Committee />} />
 						<Route path='/class-council' element={<ClassCouncil />} />
 						<Route path='/feedback' element={<Feedback />} />
+						<Route path='/gallery' element={<Gallery />} />
 						<Route path='/:path' element={<NotFound />} />
 						<Route path='/' element={<Index />} />
 					</Routes>

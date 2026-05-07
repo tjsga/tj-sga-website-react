@@ -73,11 +73,19 @@ export default function RecentNews() {
         const script = document.createElement('script');
         script.src = '//www.instagram.com/embed.js';
         script.async = true;
+        script.onload = () => {
+            // Process Instagram embeds after script loads
+            if ((window as any).instgrm) {
+                (window as any).instgrm.Embeds.process();
+            }
+        };
         document.body.appendChild(script);
 
         return () => {
             // Cleanup script when component unmounts
-            document.body.removeChild(script);
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
         };
     }, []);
 
@@ -114,6 +122,10 @@ export default function RecentNews() {
                 >
                 </blockquote>
 			</div>
+
+			{/* spacer */}
+			<div><br></br></div>
+			<div><br></br></div>
 
 
 

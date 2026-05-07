@@ -17,18 +17,8 @@ let pages = [
 		],
 	},
 	{
-		url: '#',
+		url: '/news',
 		title: 'News',
-		items: [
-			{
-				url: '/news',
-				title: 'News',
-			},
-		],
-	},
-	{
-		url: '/initiatives',
-		title: 'Initiatives',
 	},
 	{
 		url: '#',
@@ -37,6 +27,10 @@ let pages = [
 			{
 				url: '/mission',
 				title: 'Mission and History',
+			},
+			{
+				url: '/initiatives',
+				title: 'Initiatives',
 			},
 			{
 				url:
@@ -62,6 +56,10 @@ let pages = [
 	{
 		url: '/feedback',
 		title: 'Feedback',
+	},
+	{
+		url: '/gallery',
+		title: 'Gallery',
 	},
 ];
 
